@@ -23,7 +23,7 @@ module.exports = {
             value : "g.villerez.fr"
         },
         {
-            logo : "linkedin-square",
+            logo : "lkdn-square",
             href : "https://www.linkedin.com/in/villerez",
             value : "linkedin.com/in/villerez"
         },
