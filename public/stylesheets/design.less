@@ -1,0 +1,299 @@
+// HTML elements modifications
+body {
+  margin: 0;
+
+  font-family:  Lato, sans-serif;
+  font-weight: 400;
+
+  background: #FAFAFA;
+}
+
+a {
+  // Avoid link being underlined or colored
+  text-decoration: inherit;
+  color: inherit;
+}
+
+ul {
+  // Make list without style by default
+  list-style: none;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  // Title green with a normal weight
+  font-weight: normal;
+  color: #009688;
+}
+
+h1 {
+  // Left negative margin
+  margin: 0 0 10px -20px;
+  font-size: 2em;
+}
+
+h3 {
+  // Left negative margin
+  margin: 10px 0 0 -6px;
+  font-size: 1.2em;
+}
+
+.fa:before {
+  // Add some margin to font awesome icons
+  margin-right: 10px;
+}
+
+// Material design custom buttons
+// From : http://codepen.io/iraycd/pen/dHrxv
+.button {
+  display: inline-block;
+  position: relative;
+  min-width: 120px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 2px;
+  font-size: 0.9em;
+  background-color: #fff;
+  color: #646464;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.narrow {
+    width: 60px;
+  }
+
+  &.grey {
+    background-color: #eee;
+  }
+
+  &.blue {
+    background-color: #4285f4;
+    color: #fff;
+  }
+
+  &.green {
+    background-color: #0f9d58;
+    color: #fff;
+  }
+
+  &.raised {
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0.2s;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  }
+
+  &.raised:active {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+    transition-delay: 0s;
+  }
+
+  &.less-important {
+    color: white;
+    background: #FFB74D;
+  }
+
+  &.important {
+    color: white;
+    background: #FB8C00;
+  }
+
+  & > paper-ripple {
+    border-radius: 2px;
+    overflow: hidden;
+  }
+}
+
+// Progress bar with a material design look
+// http://codepen.io/ugross/pen/zAitb
+.progress-bar {
+  float: right;
+  position: relative;
+  display: block;
+  margin-top: 4px;
+  width: 150px;
+  background: #eee;
+  height: 14px;
+  border-radius: 3px;
+
+  & > div {
+    height: 100%;
+    width: 0;
+    background: #FFAB40;
+    border-radius: 3px;
+  }
+}
+
+// Material design text-tags
+.tag {
+  color: white;
+  font-size: 97%;
+
+  float: right;
+
+  background-color: #F57C00;
+  border-radius: 3px;
+
+  padding: 2px 6px 2px 6px;
+  margin-right: 2px;
+  margin-top: -2px;
+
+  &.darker {
+    background-color: #607D8B;
+  }
+}
+
+// Material design cards
+// http://codepen.io/sdthornton/pen/wBZdXq
+.card {
+  display: block;
+
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: box-shadow 0.2s ease-in-out;
+
+  margin: 20px;
+  padding: 20px 60px;
+  background-color: white;
+
+  &:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+
+  &.come-in {
+    transform: translateY(150px);
+    animation: come-in 0.8s ease forwards;
+  }
+
+  &.come-in:nth-child(odd) {
+    animation-duration: 0.6s;
+  }
+
+  &.already-visible {
+    transform: translateY(0);
+    animation: none;
+  }
+
+  @keyframes come-in {
+    to { transform: translateY(0); }
+  }
+}
+
+// Text zone, used for career, projects, etc...
+.zone {
+
+  // Title is in black, and followed by a coma
+  .title {
+    font-size: 110%;
+    color: black;
+
+    &:after {
+      content: ", ";
+      display: inline-block;
+      text-align: center;
+      width: 0.15cm;
+    }
+  }
+
+  .after-title {
+    font-size: 110%;
+    color: darkgray;
+  }
+
+  .detail {
+    font-size: 80%;
+    font-style: italic;
+    color: gray;
+
+    margin-top: 0.2cm;
+  }
+
+  .quote {
+    border-left: 3px solid lightgray;
+    padding-left: 20px;
+    color: #555;
+  }
+
+  // Link have a special color
+  .link {
+    margin-bottom: 4px;
+    margin-top: 10px;
+    color: indianred;
+
+    &:hover {
+      color: darkred;
+    }
+  }
+
+  // Image link are link with an image and a border
+  .img-link {
+    display: inline-block;
+    color: gray;
+    text-decoration: inherit;
+    font-size: 85%;
+
+    padding: 0 6px 3px 6px;
+    margin-bottom: 15px;
+
+    border-radius: 3px;
+    border: 1px solid lightgray;
+
+    &:before {
+      content: '';
+      background: url('../images/link.svg') no-repeat center;
+      background-size: contain;
+
+      width: 17px;
+      height: 17px;
+      display: inline-block;
+
+      margin-right: 4px;
+      margin-bottom: -5px;
+    }
+
+    &.github:before {
+      background-image: url('../images/github.svg');
+    }
+
+    &.npm:before {
+      background-image: url('../images/npm.svg');
+    }
+
+    &:hover {
+      color: black;
+      border-color: black;
+    }
+  }
+
+  .description {
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+
+  p {
+    text-align: justify;
+    font-size: 90%;
+    span {
+      display: inline-block;
+      margin-bottom: 0.2cm;
+    }
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  // Bottom bar
+  border-bottom: 1px solid #F1F1F1;
+  margin-bottom: 0.2cm;
+}
+
+footer {
+  text-align: center;
+  color: gray;
+}

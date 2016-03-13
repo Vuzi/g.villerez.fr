@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+{{> header}}
+<body>
+
+<!-- Header of the page -->
+<header>
+    <h1>Guillaume VILLEREZ.fr</h1>
+    <h3>Ma vie, mon œuvre, mon C.V.</h3>
+
+    <div class="header-buttons">
+        <a href="#skills">
+            <div class="button raised">
+                <div class="center" fit>Compétences</div>
+                <paper-ripple fit></paper-ripple>
+            </div>
+        </a>
+        <a href="#career">
+            <div class="button raised" style="width: 170px;">
+                <div class="center" fit>Expérience professionnelle</div>
+                <paper-ripple fit></paper-ripple>
+            </div>
+        </a>
+        <a href="#projects">
+            <div class="button raised">
+                <div class="center" fit>Projets personnels</div>
+                <paper-ripple fit></paper-ripple>
+            </div>
+        </a>
+        <a href="#educations">
+            <div class="button raised">
+                <div class="center" fit>Formation</div>
+                <paper-ripple fit></paper-ripple>
+            </div>
+        </a>
+        <a href="#languages">
+            <div class="button raised">
+                <div class="center" fit>Langues</div>
+                <paper-ripple fit></paper-ripple>
+            </div>
+        </a>
+    </div>
+</header>
+
+<main>
+    <!-- Left menu -->
+    <aside id="menu">
+
+        <!-- Contact information -->
+        <div class="personal-information">
+            <ul>
+                {{#data.contact}}
+                    <li>
+                        <span class="fa fa-{{logo}}"></span>
+                        {{#href}}
+                            <a href="{{href}}">{{value}}</a>
+                        {{/href}}
+                        {{^href}}
+                            {{value}}
+                        {{/href}}
+                    </li>
+                {{/data.contact}}
+            </ul>
+        </div>
+
+        <!-- About -->
+        <h3>À propos</h3>
+        <div class="about">
+            <p>{{data.about}}</p>
+        </div>
+
+        <a href="cv.html">
+            <div class="button less-important">
+                <div class="center" fit>CV imprimable (HTML)</div>
+                <paper-ripple fit></paper-ripple>
+            </div>
+        </a>
+        <a href="pdf/cv.pdf">
+            <div class="button important">
+                <div class="center" fit>CV imprimable (PDF)</div>
+                <paper-ripple fit></paper-ripple>
+            </div>
+        </a>
+    </aside>
+
+    <!-- Skills -->
+    <div class="card" id="skills">
+        <h1>Compétences</h1>
+        <div class="skills">
+        {{#data.skills}}
+            {{#title}}
+            <h3>{{title}}</h3>
+            {{/title}}
+            <ul>
+                {{#content}}
+                <li>
+                    {{name}}
+                    {{#detail}}<span>{{detail}}</span>{{/detail}}
+                    {{#level}}
+                    <div class="progress-bar" data-percent="{{level}}">
+                        <div></div>
+                    </div>
+                    {{/level}}
+                </li>
+                {{/content}}
+            </ul>
+        {{/data.skills}}
+        </div>
+    </div>
+
+    <!-- Career -->
+    <div class="card" id="career">
+        <h1>Expérience professionnelle</h1>
+        {{#data.career}}
+            <div class="zone">
+                <span class="tag darker">{{date}}</span>
+                <span class="title">{{company}}</span>
+                <span class="after-title">{{status}}</span>
+                <p class="quote">{{quote}}</p>
+                {{#description}}
+                    <p class="description">{{.}}</p>
+                {{/description}}
+            </div>
+        {{/data.career}}
+    </div>
+
+    <!-- Personal projects -->
+    <div class="card" id="projects">
+        <h1>Projets personnels</h1>
+        {{#data.projects}}
+            <div class="zone">
+                <span class="title">{{title}}</span>
+                <span class="after-title">{{status}}</span>
+                <span>
+                {{#tags}}
+                    <span class="tag">{{.}}</span>
+                {{/tags}}
+                </span>
+                {{#description}}
+                <p class="description">{{.}}</p>
+                {{/description}}
+
+                <span style="text-align: center">
+                    {{#links}}
+                        <a href="{{href}}" class="img-link {{type}}">{{value}}</a>
+                    {{/links}}
+                </span>
+            </div>
+        {{/data.projects}}
+    </div>
+
+    <!-- Educations -->
+    <div class="card" id="educations">
+        <h1>Formation</h1>
+        {{#data.education}}
+            <div class="zone">
+                <span class="tag darker">{{date}}</span>
+                <span class="title">{{diploma}}</span>
+                <span class="after-title">{{school}}</span>
+                <p class="detail">{{detail}}</p>
+                {{#quote}}
+                    <p class="quote">{{quote}}</p>
+                {{/quote}}
+                {{#link}}
+                    <p class="link">
+                        <span class="fa fa-external-link"></span>
+                        <a href="{{href}}">{{value}}</a>
+                    </p>
+                {{/link}}
+            </div>
+        {{/data.education}}
+    </div>
+
+    <!-- Languages -->
+    <div class="card" id="languages">
+        <h1>Langues</h1>
+        {{#data.language}}
+            <div class="languages">
+                {{lang}}, {{level}}<br/>{{certification}}
+            </div>
+        {{/data.language}}
+    </div>
+</main>
+
+{{> footer}}
+
+<script type="text/javascript">
+    $(function() {
+
+        var sidebar = $("#menu"),
+                $window = $(window),
+                offset = 160,
+                topPadding = 120,
+                shrinkOn = 70,
+                header = $("header"),
+                main = $("main"),
+                footer = $("footer"),
+                articles = $(".card");
+
+        // Header shrink
+        $window.on('scroll', function(){
+            if ($window.scrollTop() > shrinkOn) {
+                header.addClass("smaller");
+            } else {
+                header.removeClass("smaller");
+            }
+        });
+
+        // Skillbar animation at startup
+        $('.progress-bar').each(function(){
+            $(this).children().animate({
+                width : $(this).attr('data-percent') + '%'
+            }, 1000);
+        });
+
+        // Left menu animation
+        $window.on('scroll', function() {
+            if(sidebar.css('float') === 'left') {
+                if ($window.scrollTop() + $window.height() >=  main.offset().top + main.height()) {
+                    // Bottom
+                    sidebar.stop().animate({
+                        marginTop: $(document).height() - 900
+                    });
+                } else if ($window.scrollTop() > offset) {
+                    // Somewhere between
+                    sidebar.stop().animate({
+                        marginTop: $window.scrollTop() - topPadding
+                    });
+                } else {
+                    // Top
+                    sidebar.stop().animate({
+                        marginTop: 0
+                    });
+                }
+            } else {
+                sidebar.css('margin-top', 0);
+            }
+        });
+
+        $.fn.visible = function(partial) {
+            var $t            = $(this),
+                viewTop       = $window.scrollTop(),
+                viewBottom    = viewTop + $window.height(),
+                _top          = $t.offset().top,
+                _bottom       = _top + $t.height(),
+                compareTop    = partial === true ? _bottom : _top,
+                compareBottom = partial === true ? _top : _bottom;
+
+            return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+        };
+
+        // Animation for articles
+        articles.each(function(i, el) {
+            if ($(el).visible(true)) {
+                $(el).addClass("already-visible");
+            }
+        });
+
+        $window.scroll(function() {
+            articles.each(function(i, el) {
+                if ($(el).visible(true)) {
+                    $(el).addClass("come-in");
+                }
+            });
+        });
+
+        // Anchor animations
+        $('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop : target.offset().top - offset + 105
+                    }, 600);
+                    return false;
+                }
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
