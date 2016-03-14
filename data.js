@@ -1,8 +1,8 @@
 
 module.exports = {
 
-    about : "D'une nature curieuse et passionné depuis toujours par l'informatique et les nouvelles technologies, " +
-            "je termine actuellement un master en alternance afin de me former au plus proche du métier.",
+    about : "Curieux et passionné depuis toujours par l'informatique et les nouvelles technologies, "+
+            "je termine actuellement un master en alternance dans le domaine de l'architecture logicielle",
     contact : [
         {
             logo : "map-marker",
