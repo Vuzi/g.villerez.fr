@@ -7,6 +7,10 @@ router.get('/', function(req, res) {
     res.render('index.html', { data : data });
 });
 
+router.get('/DOC/CV.pdf', function(req, res) {
+    res.render('cv.html', { data : data });
+});
+
 router.get('/cv(.html)?', function(req, res) {
     res.render('cv.html', { data : data });
 });
