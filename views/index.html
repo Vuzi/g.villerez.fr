@@ -6,7 +6,7 @@
 <!-- Header of the page -->
 <header>
     <h1>Guillaume VILLEREZ.fr</h1>
-    <h3>Ma vie, mon œuvre, mon C.V.</h3>
+    <h3 style="transform: rotate(-2deg)">Étudiant en Architecture Logicielle</h3>
 
     <div class="header-buttons">
         <a href="#skills">
@@ -33,9 +33,9 @@
                 <paper-ripple fit></paper-ripple>
             </div>
         </a>
-        <a href="#languages">
+        <a href="#associations">
             <div class="button raised">
-                <div class="center" fit>Langues</div>
+                <div class="center" fit>Associations</div>
                 <paper-ripple fit></paper-ripple>
             </div>
         </a>
@@ -169,6 +169,27 @@
                 {{/link}}
             </div>
         {{/data.education}}
+    </div>
+
+    <!-- Associations -->
+    <div class="card" id="associations">
+        <h1>Vie associative</h1>
+        {{#data.associations}}
+            <div class="zone">
+                <span class="tag darker">{{date}}</span>
+                <span class="title">{{title}}</span>
+                <span class="after-title">{{status}}</span>
+                {{#description}}
+                <p class="description">{{.}}</p>
+                {{/description}}
+
+                <span style="text-align: center">
+                    {{#links}}
+                        <a href="{{href}}" class="img-link {{type}}">{{value}}</a>
+                    {{/links}}
+                </span>
+            </div>
+        {{/data.associations}}
     </div>
 
     <!-- Languages -->

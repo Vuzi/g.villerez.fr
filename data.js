@@ -193,10 +193,14 @@ module.exports = {
                 {
                     name : "Python",
                     detail : "(2.7 et 3.5, Robot Framework, PyGame)",
-                    level : 50
+                    level : 60
                 },
                 {
-                    name : "Notions en Haskell et en Scala"
+                    name : "Scala",
+                    level : 40
+                },
+                {
+                    name : "Notions en Haskell"
                 }
             ]
         },
@@ -255,6 +259,36 @@ module.exports = {
         {
             lang : "Français",
             level : "langue natale"
+        }
+    ],
+
+    associations : [
+        {
+            title : "Association de programmation",
+            status : "ESGI",
+            date : "2012-2013",
+            description : [ "Association de programmation à l’ESGI, langage C et SDL" ]
+        },
+        {
+            title : "Code kata",
+            status : "ESGI",
+            date : "2014",
+            description : [ "Association de 'code kata' à l’ESGI" ]
+        },
+        {
+            title : "Developer Days",
+            status : "ESGI",
+            date : "2015",
+            description : [ "Présentation aux étudiants du langage Scala, au travers du développement d'un logiciel " + 
+                            "permettant de déchiffrer automatiquement  le code de César en se basant sur la fréquence " +
+                            "des différentes lettres du message" ],
+            links : [
+                {
+                    type : "github",
+                    href : "https://github.com/Vuzi/vuziks",
+                    value : "github.com/Vuzi/vuziks"
+                }
+            ]
         }
     ]
 };
