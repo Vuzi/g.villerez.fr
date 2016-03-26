@@ -250,6 +250,28 @@ module.exports = {
         }
     ],
 
+    publication : [
+        {
+            title : "Les limites des langages interprétés",
+            date : "2016",
+            subtitle : "Quelles sont les limites actuelles des langages interprétés, et comment les surmonter ?",
+            description : [
+                "Mémoire réalisé dans le cadre de la validation de mes études. La montée en puissance récente du monde " +
+                "du web propose également de nouveaux défis à ces langages en pleine période transitoire ; les " +
+                "anciennes technologies meurent ou s’adaptent afin de gommer toujours plus les limites qui les séparent " +
+                "des langages traditionnels, interprétés ou non.",
+
+                "Ce mémoire tentera traiter avec le plus de recul possible les limitations actuelles des différents " +
+                "langages interprétés, et les différentes réponses possibles à ces problématiques (qu’elles soient déjà " +
+                "utilisées ou simplement à l’état de projet)."
+            ],
+            link : {
+                href : "pdf/thesis.pdf",
+                value : "Mémoire au format PDF"
+            }
+        }
+    ],
+
     language : [
         {
             lang : "Anglais",
