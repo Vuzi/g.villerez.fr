@@ -192,6 +192,28 @@
         {{/data.associations}}
     </div>
 
+    <!-- Publications -->
+    <div class="card" id="publications">
+        <h1>Mémoire de fin d'étude</h1>
+        {{#data.publication}}
+            <div class="zone">
+                <span class="tag darker">{{date}}</span>
+                <span class="title">{{title}}</span>
+                <span class="under-title">{{subtitle}}</span>
+                {{#description}}
+                <p class="description">{{.}}</p>
+                {{/description}}
+
+                {{#link}}
+                <p class="link">
+                    <span class="fa fa-external-link"></span>
+                    <a href="{{href}}">{{value}}</a>
+                </p>
+                {{/link}}
+            </div>
+        {{/data.publication}}
+    </div>
+
     <!-- Languages -->
     <div class="card" id="languages">
         <h1>Langues</h1>
