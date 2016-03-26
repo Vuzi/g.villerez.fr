@@ -267,13 +267,13 @@ module.exports = {
             title : "Association de programmation",
             status : "ESGI",
             date : "2012-2013",
-            description : [ "Association de programmation à l’ESGI, langage C et SDL" ]
+            description : [ "Association de programmation à l’ESGI, langage C et SDL." ]
         },
         {
             title : "Code kata",
             status : "ESGI",
             date : "2014",
-            description : [ "Association de 'code kata' à l’ESGI" ]
+            description : [ "Association de 'code kata' à l’ESGI, avec réalisation de différents katas en Python." ]
         },
         {
             title : "Developer Days",
@@ -281,12 +281,12 @@ module.exports = {
             date : "2015",
             description : [ "Présentation aux étudiants du langage Scala, au travers du développement d'un logiciel " + 
                             "permettant de déchiffrer automatiquement  le code de César en se basant sur la fréquence " +
-                            "des différentes lettres du message" ],
+                            "des différentes lettres du message." ],
             links : [
                 {
                     type : "github",
-                    href : "https://github.com/Vuzi/vuziks",
-                    value : "github.com/Vuzi/vuziks"
+                    href : "https://github.com/Vuzi/CeasarDecoder",
+                    value : "github.com/Vuzi/CeasarDecoder"
                 }
             ]
         }
