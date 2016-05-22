@@ -197,7 +197,7 @@ module.exports = {
                 },
                 {
                     name : "Scala",
-                    level : 40
+                    level : 20
                 },
                 {
                     name : "Notions en Haskell"
