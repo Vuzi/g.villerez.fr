@@ -4,7 +4,7 @@ body {
 
     font-weight: 400;
 
-    background: url('../images/crossword.png');
+    background: url('../img/crossword.png');
 
     // Force to print with every element
     -webkit-print-color-adjust:exact;
@@ -87,7 +87,7 @@ ul {
 }
 
 .zone {
-	margin-bottom: 0.8cm;
+	margin-bottom: 0.6cm;
 }
 
 // Personnal informations panel
@@ -100,12 +100,12 @@ ul {
 		text-align: center;
 		border-right: 5px solid #00897B;
 
-		background-image: url('../images/congruent_pentagon.png');
-		box-shadow: 0px 0px 10px -4px;
+		background-image: url('../img/congruent_pentagon.png');
+    	box-shadow: 0px 0px 10px -4px;
 
    		display: block;
 
-		// Name
+   	// Name
 		h1 {
 			font-size: 280%;
 			font-family: "PT Sans";
@@ -240,7 +240,7 @@ ul {
 
 	  		&:before {
 				content:'';
-		  		background-image: url('../images/link.svg');
+		  		background-image: url('../img/link.svg');
 		  		background-size: contain;
 		  		background-repeat: no-repeat;
 		  		background-position: center;
@@ -254,11 +254,11 @@ ul {
 			}
 
 	  		&.github:before {
-		  		background-image: url('../images/github.svg');
+		  		background-image: url('../img/github.svg');
 			}
 
 			&.npm:before {
-		  		background-image: url('../images/npm.svg');
+		  		background-image: url('../img/npm.svg');
 			}
 
 			&:hover {
@@ -271,6 +271,7 @@ ul {
 	p {
 		text-align: justify;
 		font-size: 90%;
+		margin-bottom: 0.15cm;
 		span {
 			display: inline-block;
 			margin-bottom: 0.2cm;

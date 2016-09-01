@@ -132,9 +132,18 @@ module.exports = {
 
     career : [
         {
+            company : "Zengularity",
+            status : "Architect logiciel",
+            date : "2016 - Présent",
+            quote : "Zengularity est une entreprise française spécialisée dans le web de demain. Adeptes des nouvelles technologies celle-ci propose des choix adaptés et modernes aux entreprises souhaitant effectuer leur révolution numérique",
+            description : [
+                "Apprentissage du langage de programmation fonctionnel Scala, et mise en pratique de celui-ci sur des projets informatiques"
+            ]
+        },
+        {
             company : "Alter-Frame",
             status : "Développeur",
-            date : "2014 - Présent",
+            date : "2014 - 2016",
             quote : "Alter Frame est la structure d’édition de logiciels et de développement au forfait d’Alter " +
             "Groupe. Cette structure a pour vocation d’apporter une véritable plus value qualitative dans la " +
             "réalisation de solutions full-web et le développement de projets informatiques.",
