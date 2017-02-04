@@ -1,6 +1,6 @@
 FROM mhart/alpine-node:7
 
-ENV PORT=81
+ENV PORT=80
 ENV ENV=production
 
 # Create the dir

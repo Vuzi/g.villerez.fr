@@ -6,4 +6,4 @@ services:
     volumes:
       - /var/log/g.villerez.fr:/var/log/node
     ports:
-      - "8080:81"
+      - "8080:80"
