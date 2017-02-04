@@ -1,0 +1,9 @@
+version: '2'
+services:
+
+  g.villerez.fr:
+    build: .
+    volumes:
+      - /var/log/g.villerez.fr:/var/log/node
+    ports:
+      - "8080:81"
