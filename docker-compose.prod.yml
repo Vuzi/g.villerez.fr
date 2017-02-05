@@ -1,0 +1,9 @@
+version: '2'
+services:
+
+  g.villerez.fr:
+    volumes:
+      - /var/log/g.villerez.fr:/var/log/node
+    ports:
+      - localhost:200:80
+
