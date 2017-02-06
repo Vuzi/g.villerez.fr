@@ -5,5 +5,5 @@ services:
     volumes:
       - /var/log/g.villerez.fr:/var/log/node
     ports:
-      - localhost:200:80
+      - 127.0.0.1:200:80
 
