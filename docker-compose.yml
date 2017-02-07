@@ -3,5 +3,3 @@ services:
 
   g.villerez.fr:
     build: .
-    restart: always
-
