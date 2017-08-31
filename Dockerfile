@@ -20,4 +20,4 @@ RUN npm install
 EXPOSE $PORT
 
 # Start the server
-ENTRYPOINT forever --fifo -e /var/www/showMe/error.log -o /var/www/showMe/info.log -c "npm run start:prod" .
+ENTRYPOINT forever --fifo -e /var/www/g.villerez.fr/error.log -o /var/www/g.villerez.fr/info.log -c "npm run start:prod" .
