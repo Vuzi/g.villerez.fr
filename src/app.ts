@@ -2,6 +2,7 @@ import * as express from 'express'
 import * as logger from 'morgan'
 import * as mustacheExpress from 'mustache-express'
 import * as path from 'path'
+import * as compression  from 'compression'
 import index from './routes/index'
 import less = require('less-middleware')
 
@@ -12,6 +13,9 @@ app.engine('html', mustacheExpress())
 // View engine setup
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'html')
+
+// Compress responses
+app.use(compression())
 
 // Logger (TODO use better logger ?)
 app.use(logger('dev'))
