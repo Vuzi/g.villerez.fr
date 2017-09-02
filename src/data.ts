@@ -21,12 +21,12 @@ export default {
 			skills : [
 				{
 					tech : 'Scala',
-					detail : '(Play Framework, Anorm, ReactiveMongo, Akka Stream, Kafka)',
+					detail : '(Play Framework, Anorm, ReactiveMongo, Akka Stream)',
 					level : 85
 				},
 				{
 					tech : 'C/C++',
-					detail : '(Programmation Sys. Linux, C++11, STL, binding JavaScript V8)',
+					detail : '(Programmation Sys. Linux, C++11, STL, binding V8)',
 					level : 70
 				},
 				{
