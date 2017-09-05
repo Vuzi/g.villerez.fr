@@ -83,7 +83,7 @@ export default {
 	career : [
 		{
 			company : 'Zengularity',
-			status : 'Architect logiciel',
+			status : 'Architecte logiciel',
 			date : '2016 - Présent',
 			logo : 'zen-logo.png',
 			quote : `Zengularity est une entreprise française spécialisée dans le web de demain. 
