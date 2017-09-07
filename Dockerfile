@@ -13,7 +13,7 @@ COPY . /var/www/g.villerez.fr
 # Install forever
 RUN npm install forever -g
 
-## Install the server
+# Install the server
 RUN npm install
 
 # Use the server dir and the provided prot
