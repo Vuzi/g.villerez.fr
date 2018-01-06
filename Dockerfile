@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:8
+FROM mhart/alpine-node:9
 
 ENV PORT=80
 ENV ENV=prod
