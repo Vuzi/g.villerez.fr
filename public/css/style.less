@@ -11,8 +11,8 @@
 @secondary-color: #FFAB40;
 @background-color: #FAFAFA;
 
-@desktop: ~"(min-width: 1120px) and (min-height: 800px)";
-@mobile:  ~"(max-width: 1120px), (max-height: 800px)";
+@desktop: ~"(min-width: 1120px)";
+@mobile:  ~"(max-width: 1120px)";
 
 body {
   background: url('../img/background.jpg') no-repeat;
@@ -211,19 +211,44 @@ a {
 }
 
 .wrapper {
+	display: flex;
   margin: auto;
+  
+  @media @desktop {
+    flex-direction: row;
+  }
 
-  .aside-wrapper {
+  @media @mobile {
+    flex-direction: column;
+  }
+
+  .content {
+
     @media @desktop {
-      position: fixed;
-      height: 100%;
-      width: 350px;
+      width: 760px;
     }
 
     @media @mobile {
       width: 700px;
     }
+
+    flex: auto;
   }
+  
+  .aside-wrapper {
+    
+    @media @desktop {
+      width: 350px;
+      margin-right: -10px;
+    }
+
+    @media @mobile {
+      width: 700px;
+    }
+
+    flex: auto;
+  }
+
 }
 
 .info {
@@ -352,14 +377,6 @@ a {
 }
 
 .content {
-  @media @desktop {
-    width: 760px;
-    margin-left: 340px;
-  }
-
-  @media @mobile {
-    width: 700px;
-  }
 
   .skills {
     ul {
