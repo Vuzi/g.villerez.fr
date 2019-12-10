@@ -16,7 +16,7 @@
           <div class="job" >
             {{ info.job }}
           </div>
-    
+
           <div class="location" >
             {{ info.location }}
           </div>
@@ -58,13 +58,13 @@
         </section>
 
         <div class="links" >
-          <a href="cv/cv.html">
+          <a href="curriculum-vitae/cv.html">
             <div class="button less-important">
               <div class="center" fit="">CV imprimable (HTML)</div>
               <paper-ripple fit=""></paper-ripple>
             </div>
           </a>
-          <a href="files/cv.pdf">
+          <a href="curriculum-vitae/cv.pdf">
             <div class="button important">
               <div class="center" fit="">CV imprimable (PDF)</div>
               <paper-ripple fit=""></paper-ripple>
@@ -109,6 +109,11 @@
           <img class="logo" src="/img/{{ logo }}" ></img>
           <span class="title">{{ company }}</span>
           <span class="after-title">{{ status }}</span>
+          <div class="tags">
+          {{ #tags }}
+            <span class="tag">{{.}}</span>
+          {{ /tags }}
+          </div>
           <p class="quote">{{ quote }}</p>
           {{ #description }}
           <p class="description">{{.}}</p>
@@ -173,7 +178,7 @@
           <span class="tag darker">{{ date }}</span>
           <span class="title">{{ title }}</span>
           <span class="after-title">{{ status }}</span>
-          
+
           {{ #description }}
             <p class="description">{{.}}</p>
           {{ /description }}
@@ -195,11 +200,11 @@
           <span class="tag darker">{{ date }}</span>
           <span class="title">{{ title }}</span>
           <p class="detail">{{ detail }}</p>
-          
+
           {{ #description }}
             <p class="description">{{.}}</p>
           {{ /description }}
-          
+
           {{ #link }}
             <p class="link">
               <span class="fa fa-external-link"></span>

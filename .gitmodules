@@ -1,0 +1,6 @@
+[submodule "curriculum-vitae"]
+	path = curriculum-vitae
+	url = git@github.com:Vuzi/curriculum-vitae.git
+[submodule "public/curriculum-vitae"]
+	path = public/curriculum-vitae
+	url = git@github.com:Vuzi/curriculum-vitae.git

@@ -15,10 +15,7 @@
 @mobile:  ~"(max-width: 1120px)";
 
 body {
-  background: url('../img/background.jpg') no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
+  background: url('../img/background.png');
   background-color: @background-color;
 
   font-family: Lato, sans-serif;
@@ -32,15 +29,11 @@ a {
 }
 
 .card {
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border: 1px solid lightgray;
   transition: box-shadow .2s ease-in-out;
   margin: 20px;
-  padding: 20px 60px 30px 60px;
+  padding: 25px 60px 30px 60px;
   background-color: white;
-
-  &:hover {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  }
 
   h2 {
     color: @main-color;
@@ -120,11 +113,12 @@ a {
 
   .logo {
     height: 28px;
+    width: 28px;
     margin-bottom: -8px;
     margin-left: -13px;
     margin-right: 4px;
   }
-  
+
   .title {
     font-size: 110%;
     color: black;
@@ -213,7 +207,7 @@ a {
 .wrapper {
 	display: flex;
   margin: auto;
-  
+
   @media @desktop {
     flex-direction: row;
   }
@@ -234,9 +228,9 @@ a {
 
     flex: auto;
   }
-  
+
   .aside-wrapper {
-    
+
     @media @desktop {
       width: 350px;
       margin-right: -10px;
@@ -269,7 +263,7 @@ a {
     color: white;
     font-size: 25px;
   }
-  
+
   .photo {
     margin: auto;
     margin-top: 20px;
@@ -346,7 +340,7 @@ a {
       text-align: center;
       width: 215px;
     }
-    
+
     @media @desktop  {
       flex-flow: column;
 
@@ -361,7 +355,7 @@ a {
         }
       }
     }
-    
+
     @media @mobile {
       flex-flow: row;
 
@@ -417,3 +411,8 @@ a {
   }
 }
 
+.tags {
+  display: flex;
+  margin-top: 9px;
+  margin-left: 27px;
+}
