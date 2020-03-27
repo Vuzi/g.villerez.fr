@@ -3,13 +3,13 @@ export default {
 
 	info : {
 		name : 'Guillaume Villerez',
-		job : 'Lead Développeur, Ditto Services',
+    job : 'Full stack developer @ Ditto',
+    occupation : 'Software craftsman & FP advocate',
 		location : 'Région parisienne, France',
 		mail : 'guillaume@villerez.fr',
 		linkedin : 'linkedin.com/in/villerez',
 		github : 'github.com/Vuzi',
 		about : [
-			`Software craftsman & FP advocate`,
 			`Curieux et passionné depuis toujours par l'informatique et les nouvelles technologies,
       je travaille actuellement chez Ditto Services où je participe 
       activement à la construction de la plateforme d'open banking de demain.`
@@ -115,7 +115,7 @@ export default {
 			status : 'Full-stack développeur',
 			date : '2020 - Présent',
 			logo : 'ditto-logo.png',
-			tags : [ 'FP', 'Scala', 'Cats', 'Akka', 'Kafka', 'Event streaming' ],
+			tags : [ 'FP', 'Scala', 'Cats', 'Kafka', 'Event streaming', 'Micro-services' ],
 			quote : `La plateforme Open Banking de Ditto Services a pour but de permettre aux entreprises de se concentrer sur leur coeur d’activité en 
 			         leur donnant accès à une gamme complète d’APIs intégrables facilement et ainsi développer les parcours-clients les plus innovants.
 					     Grâce au partenariat avec la sociétés soeurs Banque Travelex, établissement de crédit agréé par l’Autorité de Contrôle Prudentiel 
