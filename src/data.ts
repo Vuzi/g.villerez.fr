@@ -3,15 +3,16 @@ export default {
 
 	info : {
 		name : 'Guillaume Villerez',
-		job : 'Lead Développeur, ReachFive',
+		job : 'Lead Développeur, Ditto Services',
 		location : 'Région parisienne, France',
 		mail : 'guillaume@villerez.fr',
 		linkedin : 'linkedin.com/in/villerez',
 		github : 'github.com/Vuzi',
 		about : [
-			`Software craftsman, FP advocate & technophile`,
+			`Software craftsman & FP advocate`,
 			`Curieux et passionné depuis toujours par l'informatique et les nouvelles technologies,
-			je travaille actuellement en tant que lead développeur chez ReachFive, après deux années chez Zengularity où je suis tombé dans le fonctionnel.`
+      je travaille actuellement chez Ditto Services où je participe 
+      activement à la construction de la plateforme d'open banking de demain.`
 		]
 	},
 
@@ -21,18 +22,18 @@ export default {
 			skills : [
 				{
 					tech : 'Scala',
-					detail : 'FP, Play, Akka (http, streams & actor), ReactiveMongo',
-					level : 90
+					detail : 'FP, Play, Akka (http, streams & actor), Cats (Doobie, Cats-Effect)',
+					level : 95
 				},
 				{
 					tech : 'TypeScript',
 					detail : 'NodeJS, Express',
-					level : 95
+					level : 90
 				},
 				{
 					tech : 'Java SE',
 					detail : '(Swing, JavaFx, JUnit)',
-					level : 100
+					level : 90
 				},
 				{
 					tech : 'Java EE',
@@ -42,7 +43,7 @@ export default {
 				{
 					tech : 'C/C++',
 					detail : 'Système Linux, pthread, SDL',
-					level : 60
+					level : 65
 				}
 			]
 		},
@@ -83,12 +84,12 @@ export default {
 				{
 					tech : 'NoSQL',
 					detail : 'MongoDB, ElasticSearch',
-					level : 60
+					level : 80
 				},
 				{
 					tech : 'SQL',
 					detail : 'PostgreSQL, MySQL',
-					level : 60
+					level : 85
 				}
 			]
 		},
@@ -96,7 +97,8 @@ export default {
 			title : undefined,
 			skills : [
 				{
-					tech : 'Kafka'
+          tech : 'Kafka',
+          detail : 'Event-streaming, bus de message'
 				},
 				{
 					tech : 'Docker',
@@ -109,9 +111,26 @@ export default {
 
 	career : [
 		{
+			company : 'Ditto Services',
+			status : 'Full-stack développeur',
+			date : '2020 - Présent',
+			logo : 'ditto-logo.png',
+			tags : [ 'FP', 'Scala', 'Cats', 'Akka', 'Kafka', 'Event streaming' ],
+			quote : `La plateforme Open Banking de Ditto Services a pour but de permettre aux entreprises de se concentrer sur leur coeur d’activité en 
+			         leur donnant accès à une gamme complète d’APIs intégrables facilement et ainsi développer les parcours-clients les plus innovants.
+					     Grâce au partenariat avec la sociétés soeurs Banque Travelex, établissement de crédit agréé par l’Autorité de Contrôle Prudentiel 
+					     et de Résolution, nous développons une plateforme technologique de dernière génération pour la banque digitale de demain.`,
+			description : [
+        `Création de la plateforme nouvelle génération de Ditto Services from scratch, en utilisant une architecture basé sur des micro-services 
+         communiquant entre avec de l'event-streaming, assurant un découplage maximum entre les différentes briques fonctionelles.`,
+
+				`Projet réalisé en Scala (Akka-http, Akka-actor, Cats, Fs2, Cats, Cats-Effect) avec PostgreSQL en base de donnée locale et Kafka comme broker.`
+			]
+		},
+		{
 			company : 'ReachFive',
 			status : 'Lead développeur',
-			date : '2018 - Présent',
+			date : '2018 - 2020',
 			logo : 'reachfive-logo.png',
 			tags : [ 'FP', 'Scala', 'TypeScript', 'ElasticSearch', 'Kafka' ],
 			quote : `La soluon de Customer Identy and Access Management (CIAM) de
@@ -122,7 +141,7 @@ export default {
 				 lancement de divers chantiers de refactoring pour résorber la dette technique et mise en place des dernières
 				 fonctionnalités pour offrir une solution CIAM complète à l'ensemble de nos clients (Boulanger, Engie, Lacoste, etc..).`,
 
-				`Projet réalisé en Scala (Play Framework, Shapeless, Cats & MongoDB) et TypeScript (React).`
+				`Projet réalisé en Scala (Play Framework, Shapeless, Cats) et TypeScript (React), avec ElasticSearch & PostgreSQL en bases de données.`
 			]
 		},
 		{
@@ -138,13 +157,13 @@ export default {
 				`Développement d'une plateforme web facilitant la mise en relation des différents acteurs du métier
 				 de la mutuelle afin de les accompagner dans leur transition numérique.`,
 
-				`Projet réalisé en Scala (Play Framework, Shapeless, Scalaz & MongoDB) et TypeScript (ReactJS, Flux & Less).
+				`Projet réalisé en Scala (Play Framework, Shapeless, Scalaz) et TypeScript (ReactJS, Flux & Less), avec MongoDB en base de donnée.
 				 Utilisation de l'event-sourcing afin de retranscrire au mieux les événements métier.`,
 
 				`Développement d'une plateforme d'onboarding pour un grand groupe bancaire afin de numériser un processus papier
 				 et les accompagner dans leur transition numérique.`,
 
-			  `Projet réalisé en Scala (Play Framework, Cats & Oracle) et TypeScript.`
+			  `Projet réalisé en Scala (Play Framework, Cats) et TypeScript.`
 			]
 		},
 		{
