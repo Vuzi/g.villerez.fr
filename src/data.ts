@@ -122,7 +122,7 @@ export default {
 					     et de Résolution, nous développons une plateforme technologique de dernière génération pour la banque digitale de demain.`,
 			description : [
         `Création de la plateforme nouvelle génération de Ditto Services from scratch, en utilisant une architecture basé sur des micro-services 
-         communiquant entre avec de l'event-streaming, assurant un découplage maximum entre les différentes briques fonctionelles.`,
+         communiquant entre avec de l'event-streaming, assurant un découplage maximum entre les différentes briques fonctionnelles.`,
 
 				`Projet réalisé en Scala (Akka-http, Akka-actor, Cats, Fs2, Cats, Cats-Effect) avec PostgreSQL en base de donnée locale et Kafka comme broker.`
 			]
