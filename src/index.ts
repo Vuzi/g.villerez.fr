@@ -1,63 +1,77 @@
-import debug from 'debug'
-import * as http from 'http'
-import app from './app'
+import express from 'express'
+import Mustache from 'mustache'
+import path from 'path'
+import fs from 'fs'
 
-// Get port from environment and store in Express
-const port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
+import content from './content-en'
 
-// Create HTTP server
-const server = http.createServer(app);
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
+const app: express.Application = express()
+const PORT = process.env.PORT || 12345;
 
-console.log('HTTP server started')
+interface Error {
+    status?: number;
+    message?: string;
+  }
 
-// Normalize a port
-function normalizePort(val: any): number|string|boolean {
-	const parsedPort = parseInt(val, 10);
+const errorHandler = (err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
+    res.status(err.status || 500);
 
-	// Named pipe
-	if (isNaN(parsedPort))
-		return val;
+    console.log("hello")
 
-	// Port number
-	if (parsedPort >= 0)
-		return parsedPort;
+    if (req.accepts('html')) {
+        fs.readFile(path.join(__dirname, '/templates/index.html'), (fsError, data) => {
+            if (fsError)
+                res.render('error', {
+                    message: err.message,
+                    error: err
+                })
+                console.log(err.message|| '<No message>')
 
-	return false;
+            res.send(Mustache.render(data.toString(), { error: { code: err.status || 500, message: err.message || 'No message was provided with that error' } }))
+        })
+    } else {
+        res.render('error', {
+            message: err.message,
+            error: err
+        })
+    }
 }
 
-// Event listener for HTTP server "error" event.
-function onError(error: NodeJS.ErrnoException) {
-	if (error.syscall !== 'listen') {
-		throw error;
-	}
+const logger =  (req: express.Request, res: express.Response, next: express.NextFunction) => {
+    const startHrTime = process.hrtime();
+    const now = new Date()
+    let method = req.method
+    let url = req.url
+    let status = res.statusCode
+  
+    res.on("finish", () => {
+      const elapsedHrTime = process.hrtime(startHrTime);
+      const elapsedTimeInMs = elapsedHrTime[0] * 1000 + elapsedHrTime[1] / 1e6;
+      console.log(`[${now}] ${status} ${method} ${url} in ${elapsedTimeInMs.toFixed(3)}ms`);
+    });
 
-	const bind = typeof port === 'string'
-		? 'Pipe ' + port
-		: 'Port ' + port;
-
-	// handle specific listen errors with friendly messages
-	switch (error.code) {
-		case 'EACCES':
-			console.error(bind + ' requires elevated privileges');
-			process.exit(1);
-			break;
-		case 'EADDRINUSE':
-			console.error(bind + ' is already in use');
-			process.exit(1);
-			break;
-		default:
-			throw error;
-	}
+    next()
 }
 
-// Event listener for HTTP server "listening" event.
-function onListening() {
-	const addr = server.address();
-	const bind = typeof addr === 'string'
-		? 'pipe ' + addr
-		: 'port ' + addr.port;
-}
+app.use(logger)
+
+app.get('/', (req, res, next) => {
+    fs.readFile(path.join(__dirname, '/templates/index.html'), (err, data) => {
+        if (err)
+            return next(err)
+
+        res.send(Mustache.render(data.toString(), content))
+    })
+})
+
+app.use(express.static('public'))
+
+app.use((req, res, next) => {
+    next({ status: 404, message: `${req.url} not found on this server` })
+})
+
+app.use(errorHandler)
+
+app.listen(PORT, () => {
+    console.log(`[i] App is listening on port ${PORT}`)
+})

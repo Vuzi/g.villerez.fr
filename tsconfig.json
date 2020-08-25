@@ -1,9 +1,13 @@
 {
-	"compilerOptions": {
-		"allowJs": true,
-		"module": "commonjs",
-		"target": "es6",
-		"noImplicitAny": false,
-		"sourceMap": true
-	}
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonJs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "removeComments": true,
+    "outDir": "dist/bin/",
+    "rootDir": "./src/"
+  }
 }

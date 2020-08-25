@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Guillaume Villerez | CV</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="icon" href="/favicon.ico" />
+        <link rel='stylesheet' type='text/css' media='screen' href='/style.css'>
+        <link rel='stylesheet' type='text/css' media='screen' href='/all.min.css'>
+    </head>
+    <body>
+
+        {{#error}}
+        <section class="main">
+          <section class="section">
+            <h1 class="section-title" style="margin-top: 100px;">Oh no! An error {{code}} occurred :(</h1>
+            <p class="quote">{{message}}</p>
+            <div style="text-align: center; margin-top: 90px;" >
+              <a href="/"><h2 class="menu-link">Go back to the website</h2></a>
+            </div>
+          </section>
+        </section>
+      {{/error}}
+      {{^error}}
+        <section class="main">
+
+            <!-- Into -->
+
+            <section class="section">
+              <h1 class="section-title name">{{{title}}}</h1>
+
+              <section id="header-menu" class="menu">
+                <div class="menu-items">
+                  <a href="#work-anchor"><h2 class="menu-link">{{menu.work}}</h2></a>
+                  <a href="#skills-anchor"><h2 class="menu-link">{{menu.skills}}</h2></a>
+                  <a href="#projects-anchor"><h2 class="menu-link">{{menu.projects}}</h2></a>
+                  <a href="#education-anchor"><h2 class="menu-link">{{menu.education}}</h2></a>
+                </div>
+              </section>
+              <section class="presentation">
+                <p>{{{intro1}}}</p>
+                <span class="photo"></span>
+              </section>
+
+              <section class="presentation">
+                <img class="illustration" src="/img/code.png" />
+                <p>{{{intro2}}}</p>
+              </section>
+
+              <div class="line icons">
+                <span class="trait"></span>
+                <a href="https://github.com/Vuzi"><i class="icon fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/villerez/"><i class="icon fab fa-linkedin"></i></a>
+                <a href="mailto:guillaume@villerez.fr"><i class="icon far fa-envelope"></i></a>
+                <span class="trait"></span>
+              </div>
+
+            </section>
+
+            <!-- Skills section -->
+            
+            <section class="section">
+              <span class="anchor" id="skills-anchor"></span>
+              <h1 class="section-title" id="skills">{{{skills.title}}}</h1>
+
+              {{#skills.list}}
+              <section class="section-element">
+                <div class="line job-line">
+                  <img class="icon" height="50" width="50" src="https://unpkg.com/simple-icons@v3/icons/{{icon}}.svg"/>
+                  <span class="title">{{title}}</span>
+                  <span class="after-title">{{afterTitle}}</span>
+                </div>
+                <div class="line">
+                  {{#tags}}
+                  <span class="tag">{{{.}}}</span>
+                  {{/tags}}
+                </div>
+                {{#quote}}
+                <p class="quote">{{{.}}}</p>
+                {{/quote}}
+                {{#description}}
+                <p class="description">{{{.}}}</p>
+                {{/description}}
+              </section>
+              {{/skills.list}}
+
+              <hr class="separator"/>
+            </section>
+
+            <!-- Work experience section -->
+
+            <section class="section">
+              <span class="anchor" id="work-anchor"></span>
+              <h1 class="section-title" id="work">{{{work.title}}}</h1>
+
+              {{#work.list}}
+              <section class="section-element">
+                <span class="tag date">{{date}}</span>
+                <div class="line job-line">
+                  <img class="logo" src="/img/{{icon}}">
+                  <span class="title">{{title}}</span>
+                  <span class="after-title">{{afterTitle}}</span>
+                </div>
+                <div class="line">
+                    {{#tags}}
+                    <span class="tag">{{.}}</span>
+                    {{/tags}}
+                </div>
+                {{#quote}}
+                <p class="quote">{{{.}}}</p>
+                {{/quote}}
+                {{#description}}
+                <p class="description">{{{.}}}</p>
+                {{/description}}
+              </section>
+              {{/work.list}}
+
+              <hr class="separator"/>
+            </section>
+
+            <!-- Education -->
+
+            <section class="section">
+              <span class="anchor" id="education-anchor"></span>
+              <h1 class="section-title" id="education">{{{education.title}}}
+              </h1>
+
+              {{#education.list}}
+              <section class="section-element">
+                <span class="tag date2">{{date}}</span>
+                <span class="title">{{title}}</span>
+                <span class="after-title">{{afterTitle}}</span>
+                <p class="detail">{{detail}}</p>
+                {{#quote}}
+                <p class="quote">{{{.}}}</p>
+                {{/quote}}
+                {{#link}}
+                <p class="link">
+                <span class="fas fa-external-link-alt"></span>
+                <a href="{{url}}">{{text}}</a>
+                </p>
+                {{/link}}
+              </section>
+              {{/education.list}}
+            
+
+              <hr class="separator"/>
+            </section>
+
+            <!-- Personal projects -->
+
+            <section class="section">
+              <span class="anchor" id="projects-anchor"></span>
+              <h1 class="section-title" id="projects">{{{projects.title}}}</h1>
+
+              {{#projects.list}}
+              <section class="section-element">
+                <div class="line">
+                  <span class="title">{{title}}</span>
+                  <span class="after-title">{{afterTitle}}</span>
+                </div>
+                <div class="line">
+                  {{#tags}}
+                  <span class="tag">{{.}}</span>
+                  {{/tags}}
+                </div>
+                {{#quote}}
+                <p class="quote">{{.}}</p>
+                {{/quote}}
+                {{#description}}
+                <p class="description">{{.}}</p>
+                {{/description}}
+                <span style="display: flex">
+                {{#github}}
+                <span style="text-align: center">
+                  <p class="link">
+                    <span class="fab fa-github"></span>
+                    <a href="https://github.com/{{.}}">github.com/{{.}}</a>
+                  </p>
+                </span>
+                {{/github}}
+                {{#npm}}
+                <span style="text-align: center">
+                  <p class="link">
+                    <span class="fab fa-npm"></span>
+                    <a href="https://npmjs.com/package/{{.}}">npmjs.com/package/{{.}}</a>
+                  </p>
+                </span>
+                {{/npm}}
+                </span>
+              </section>
+              {{/projects.list}}
+
+              <hr class="separator"/>
+            </section>  
+
+            <section class="section copyright-section">
+            <div class="copyright">© Guillaume Villerez - All rights reserved.</div>
+            </section>
+
+        </section>
+
+        <section id="sticky-menu" class="menu">
+          <div class="menu-items">
+            <a id="skills-menu" href="#skills-anchor"><h2 class="menu-link">{{menu.skills}}</h2></a>
+            <a id="work-menu" href="#work-anchor"><h2 class="menu-link">{{menu.work}}</h2></a>
+            <a id="education-menu" href="#education-anchor"><h2 class="menu-link">{{menu.education}}</h2></a>
+            <a id="projects-menu" href="#projects-anchor"><h2 class="menu-link">{{menu.projects}}</h2></a>
+          </div>
+        </section>
+        {{/error}}
+    </body>
+
+    <script>
+      // When the user scrolls the page, execute myFunction
+      window.onscroll = function() {myFunction()};
+
+      // Get the header
+      var headerMenu = document.getElementById("header-menu")
+      var stickyMenu = document.getElementById("sticky-menu")
+
+      // Get the offset position of the navbar
+      var sticky = headerMenu.offsetTop;
+
+      // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          stickyMenu.classList.add('slide-in')
+          stickyMenu.classList.remove('slide-out')
+        } else if (stickyMenu.classList.contains('slide-in')) {
+          stickyMenu.classList.add('slide-out')
+          stickyMenu.classList.remove('slide-in')
+        }
+      }
+
+      function selectMenu(menu) {
+        for (let i = 0; i < menus.length; i++) {
+          if (i == menu)
+            menus[i].classList.add('menu-link-selected')
+          else
+            menus[i].classList.remove('menu-link-selected')
+        }
+      }
+      
+      var skills = document.getElementById("skills")
+      var work = document.getElementById("work")
+      var education = document.getElementById("education")
+      var projects = document.getElementById("projects")
+
+      var skillsMenu = document.getElementById("skills-menu").childNodes[0]
+      var workMenu = document.getElementById("work-menu").childNodes[0]
+      var educationMenu = document.getElementById("education-menu").childNodes[0]
+      var projectsMenu = document.getElementById("projects-menu").childNodes[0]
+
+      var list = [skills, work, education, projects]
+      var menus = [skillsMenu, workMenu, educationMenu, projectsMenu]
+
+      document.addEventListener('scroll', function () {
+        for (let i = 0; i < list.length; i++) {
+          if (window.pageYOffset + 500 < list[i].offsetTop) {
+            selectMenu(i - 1)
+            return;
+          }
+          selectMenu(i)
+        }
+      })
+
+    </script>
+</html>
