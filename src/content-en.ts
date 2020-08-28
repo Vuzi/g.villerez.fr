@@ -4,17 +4,17 @@ export const content = {
         Hello! My name is <span class="colored">Guillaume</span> and I'm a <span class="colored">Software Engineer</span> 
         at <span class="colored">Memo Bank</span><img class="logo-title" src="/img/memo2.png">`,
     intro1: `
-        I'am currently working at <span class="colored">Memo Bank</span>, helping them build a brand new European bank for SMEs. These days I'm working on the
-        backend of our banking core, responsible for handling everything between our ledger and our customers.<br/><br/>Before joining them, I was at 
-        <span class="colored">Ditto Services</span> building a white label open banking solution, at <span class="colored">ReachFive</span> where
-        I was a tech lead on their CIAM solution and before that at <span class="colored">Zengularity</span> where I had the opportunity to learn plenty and
+        I'm currently working at <span class="colored">Memo Bank</span>, helping them build a brand new European bank for SMEs. These days I'm working on 
+        our banking core, which is responsible for handling everything between our ledger and our customers.<br/><br/>Before joining them, I was at 
+        <span class="colored">Ditto Services</span> building a white label open banking solution, at <span class="colored">ReachFive</span> helping to build 
+        & scale their CIAM solution and before that at <span class="colored">Zengularity</span> where I had the opportunity to learn plenty and
         meet a lot of talented people.
     `,
     intro2: `
         <span class="colored">Functional programming</span> advocate since my time at <span class="colored">Zengularity</span> and ardent defender of 
-        « <span class="colored">Software craftsmanship</span> », I spent my last 5 years solving diverse technical and business challenges with a common goal:
+        « <span class="colored">Software craftsmanship</span> », I spent the last 5 years solving diverse technical and business challenges with a common goal:
         <span class="darker">offer the best solution within the limits of the resources involved</span>.<br/><br/>
-        I think that the quality of a code is never optional, and is a reflection of the intrinsic quality of the provided solution. Thus I strive
+        I think that the quality of piece of a code is never optional, and is a reflection of the intrinsic quality of the provided solution. I thus strive
         to always come up with a solution that I can be proud of.
     `,
     menu: {
