@@ -2,7 +2,7 @@
 export const content = {
     title: `
         Hello! My name is <span class="colored">Guillaume</span> and I'm a <span class="colored">Software Engineer</span> 
-        at <span class="colored">Memo Bank</span><img class="logo-title" src="/img/memo2.png">`,
+        at <span class="colored">Memo Bank</span><img class="logo-title" src="/img/memo-logo.png">`,
     intro1: `
         I'm currently working at <span class="colored">Memo Bank</span>, helping them build a brand new European bank for SMEs. These days I'm working on 
         our banking core, which is responsible for handling everything between our ledger and our customers.<br/><br/>Before joining them, I was at 
@@ -27,6 +27,7 @@ export const content = {
         title: `What do I <span class="colored" >know</span> ?`,
         list: [
             {
+                id: 'software',
                 icon: 'buffer',
                 title: 'Software Architecture',
                 afterTitle: 'Stateless and reactive',
@@ -46,11 +47,12 @@ export const content = {
                 ]
             },
             {
+                id: 'functional',
                 icon: 'scala',
                 title: 'Scala',
                 afterTitle: 'Functional Programming',
                 tags: [
-                    'FP', 'Lightbend (Play, Akka)', 'Typelevel (Cats, Shapeless, Doobie)', 'Scalaz', 'sbt', 'macro'
+                    'FP', 'Lightbend (Akka)', 'Typelevel (Cats, Shapeless, Doobie)', 'Scalaz', 'sbt', 'macro'
                 ],
                 quote: `
                     Scala is a general-purpose programming language providing support for both object-oriented programming and functional programming. The language has 
@@ -69,6 +71,7 @@ export const content = {
                 ]
             },
             {
+                id: 'javascript',
                 icon: 'typescript',
                 title: 'TypeScript & JavaScript',
                 afterTitle: 'Backend & Frontend',
@@ -90,6 +93,7 @@ export const content = {
                 ]
             },
             {
+                id: 'kotlin',
                 icon: 'kotlin',
                 title: 'Kotlin & Java',
                 afterTitle: 'Software Engineering',
@@ -113,6 +117,7 @@ export const content = {
                 ]
             },
             {
+                id: 'database',
                 icon: 'postgresql',
                 title: 'Databases',
                 afterTitle: 'SQL & NoSQL',
@@ -134,6 +139,7 @@ export const content = {
                 ]
             },
             {
+                id: 'ops',
                 icon: 'docker',
                 title: 'DevOps',
                 afterTitle: 'Docker & Continuous Integration',
@@ -154,10 +160,10 @@ export const content = {
         ]
     },
     work: {
-        title: `Where did I <span class="colored">work</span>? <img class="illustration tmp" src="img/mug.png" />`,
+        title: `Where did I <span class="colored">work</span>? <img class="illustration" src="img/mug.png" />`,
         list: [
             {
-                icon: 'memo2.png',
+                id: 'memo',
                 date: '2020 - Now',
                 title: 'Memo Bank',
                 afterTitle: 'Software Engineer',
@@ -180,11 +186,12 @@ export const content = {
                      strong consistency of our data. Automatic export of this data in regulatory reports is also made possible by this approach.`,
                     `Project developed in Kotlin (Spring, Hibernate) & Elixir (Ledger part) with PostgreSQL as our main database, ActiveMQ 
                     as our messaging queue and Kafka as our message broker.`
-                ]
+                ],
+                link: 'https://memo.bank/'
             },
             {
-                icon: 'ditto-logo.png',
-                date: '2020 (4 months)',
+                id: 'ditto',
+                date: '2020',
                 title: 'Ditto Services',
                 afterTitle: 'Software Engineer',
                 tags: [
@@ -205,7 +212,7 @@ export const content = {
                 ]
             },
             {
-                icon: 'reachfive-logo.png',
+                id: 'reachfive',
                 date: '2018 - 2020',
                 title: 'ReachFive',
                 afterTitle: 'Lead developer',
@@ -222,10 +229,11 @@ export const content = {
                      refactoring projects to reduce technical debt and implementation of the latest features to provide a complete CIAM solution to 
                      our customers (Boulanger, Engie, Lacoste, etc.).`,
                     `Project developed in Scala (Play Framework, Shapeless, Cats) and TypeScript (React), with ElasticSearch & PostgreSQL as our databases.`
-                ]
+                ],
+                link: 'https://www.reachfive.com/'
             },
             {
-                icon: 'zen-logo.png',
+                id: 'zen',
                 date: '2016 - 2018',
                 title: 'Zengularity (Fabernovel since 2019)',
                 afterTitle: 'Software architect',
@@ -246,15 +254,16 @@ export const content = {
                     `Development of an onboarding platform for the BNP Banking group, in order to digitize a lengthy and complicated paper process, 
                      and support them in their digital transition.`,
                     `Project developed in Scala (Play Framework & Cats) and TypeScript, using Oracle DB as our main database.`
-                ]
+                ],
+                link: 'https://www.fabernovel.com/en'
             },
             {
-                icon: 'esgi-logo.png',
-                date: '2017 (6 months)',
+                id: 'esgi',
+                date: '2017',
                 title: 'ESGI',
                 afterTitle: 'Freelance teacher',
                 tags: [
-                    'FP', 'Scala', 'TypeScript', 'PostgreSQL', 'MongoDB'
+                    'Version Control', 'Continuous Integration & Deployment', 'Tooling', 'Clean code'
                 ],
                 quote: `
                     Founded in 1983, the <span class="colored">ESGI</span> school trains its students in software developments to match the expectations 
@@ -263,10 +272,11 @@ export const content = {
                 description: [
                     `Course on the « developer Tools » given to 3rd year students specializing in Software Architecture.`,
                     `Course on version management software (git), git related workflows, clean code and related tools, and an introduction on continuous integration.`
-                ]
+                ],
+                link: 'https://www.esgi.fr/'
             },
             {
-                icon: 'alter-logo.png',
+                id: 'alter',
                 date: '2014-2016',
                 title: 'Alter-Frame',
                 afterTitle: 'Developer',
@@ -283,13 +293,14 @@ export const content = {
                     `Code audit of a Java application (JEE & JBE) made for managing customers and contracts, for the French credit insurance company Euler Hermes.`,
                     `Realization of a satellite data visualization application (from plain file data) plotted on a two-dimensional projection of the earth for Eutelsat,
                      with the goal to display satellite coverage on earth in a comprehensive way.`
-                ]
+                ],
+                link: 'https://alter-solutions.com/'
             },
             {
-                icon: 'scality-logo.png',
-                date: '2014 (3 months internship)',
+                id: 'scality',
+                date: '2014',
                 title: 'Scality',
-                afterTitle: 'Developer',
+                afterTitle: 'Developer (internship)',
                 tags: [
                     'C Language', 'Python', 'Robot Framework', 'Jenkins'
                 ],
@@ -305,19 +316,23 @@ export const content = {
                      on its implementation of unit tests and associated metrics (reports, code coverage).`,
                     `Choice and implementation of a unit testing framework for a C language based software, with adaptation of compilation targets,
                      porting of existing tests, and addition of new unit tests.`
-                ]
+                ],
+                link: 'https://www.scality.com/'
             },
         ]
     },
     education: {
         title: `Where did I <span class="colored">study</span>?
-                <img class="illustration tmp" src="img/university.png" />
+                <img class="illustration" src="img/university.png" />
         `,
         list: [
             {
+                id: 'master',
                 date: '2014 - 2016',
                 title: "Master's degree in Software Architecture",
                 afterTitle: 'ESGI',
+                logo: 'esgi-logo.png',
+                banner: 'esgi-banner.png',
                 detail: "« Titre niveau I d'expert en ingénierie de l’informatique et des systèmes d’information »",
                 quote: `The Software Architecture specialization at <span class="colored">ESGI</span> is an expert training on the design methods and realization of software 
                         solutions meeting the complex needs of companies from all the sectors (finance, industry, IT services companies, software publishers, etc.).`,
@@ -327,9 +342,12 @@ export const content = {
                 }
             },
             {
+                id: 'license',
                 date: '2011 - 2014',
                 title: "Bachelor's degree in Software Architecture",
                 afterTitle: 'ESGI',
+                logo: 'esgi-logo.png',
+                banner: 'esgi-banner2.png',
                 detail: "« Titre niveau II de chef de projet logiciel et réseaux »",
                 quote: `The Bachelor Degree at <span class="colored">ESGI</span> specialized in Software Architecture allows
                         students to acquire operational skills through numerous educational projects, while acquiring theoretical software architecture skills (languages, UML modeling, databases).`,
@@ -339,9 +357,11 @@ export const content = {
                 }
             },
             {
+                id: 'bac',
                 date: '2010',
                 title: 'Baccalauréat',
                 afterTitle: 'École notre Dame Providence',
+                logo: 'ndp-logo.png',
                 detail: "Baccalauréat Scientifique"
             }
         ]
@@ -350,6 +370,7 @@ export const content = {
         title: `Any <span class="colored">personal project</span> to show?`,
         list: [
             {
+                id: 'cumulus',
                 title: 'Cumulus',
                 afterTitle: 'Secure File Storage Server',
                 tags: [ 'Scala', 'Akka HTTP', 'Akka Streams' ],
@@ -366,6 +387,7 @@ export const content = {
                 github: 'Cumulus-Cloud/cumulus'
             },
             {
+                id: 'raspisensors',
                 title: 'Raspi-sensor',
                 afterTitle: 'Node.js C++ Plugin',
                 tags: [ 'Rapsberry Pi', 'C++', 'Node.js' ],
@@ -382,6 +404,7 @@ export const content = {
                 npm: 'raspi-sensors'
             },
             {
+                id: 'showme',
                 title: 'Show Me',
                 afterTitle: "Image hosting",
                 tags: [ 'NodeJS', 'React', 'Redux', 'TypeScript' ],
@@ -399,6 +422,7 @@ export const content = {
                 github: 'Vuzi/showMe',
             },
             {
+                id: 'vuziks',
                 title: 'Vuziks',
                 afterTitle: "Scripting language",
                 tags: [ 'C Language', 'Lexx/Yacc' ],

@@ -3,7 +3,6 @@
     <head>
         <meta charset='utf-8'>
         <title>Guillaume Villerez | CV</title>
-        <meta name='viewport' content='width=device-width, initial-scale=1'>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&Roboto:wght@300&display=swap" rel="stylesheet">
         <link rel="icon" href="/favicon.ico" />
         <link rel='stylesheet' type='text/css' media='screen' href='/style.css'>
@@ -27,8 +26,8 @@
             </div>
           </section>
         </section>
-      {{/error}}
-      {{^error}}
+        {{/error}}
+        {{^error}}
         <section class="main">
 
             <!-- Into -->
@@ -64,94 +63,127 @@
 
             </section>
 
-            <!-- Skills section -->
-            
-            <section class="section">
-              <span class="anchor" id="skills-anchor"></span>
-              <h1 class="section-title" id="skills">{{{skills.title}}}</h1>
-
-              {{#skills.list}}
-              <section class="section-element">
-                <div class="line job-line">
-                  <img class="icon" height="50" width="50" src="https://unpkg.com/simple-icons@v3/icons/{{icon}}.svg"/>
-                  <span class="title">{{title}}</span>
-                  <span class="after-title">{{afterTitle}}</span>
-                </div>
-                <div class="line">
-                  {{#tags}}
-                  <span class="tag">{{{.}}}</span>
-                  {{/tags}}
-                </div>
-                {{#quote}}
-                <p class="quote">{{{.}}}</p>
-                {{/quote}}
-                {{#description}}
-                <p class="description">{{{.}}}</p>
-                {{/description}}
-              </section>
-              {{/skills.list}}
-
-              <hr class="separator"/>
-            </section>
-
             <!-- Work experience section -->
 
             <section class="section">
               <span class="anchor" id="work-anchor"></span>
               <h1 class="section-title" id="work">{{{work.title}}}</h1>
-
-              {{#work.list}}
-              <section class="section-element">
-                <span class="tag date">{{date}}</span>
-                <div class="line job-line">
-                  <img class="logo" src="/img/{{icon}}">
-                  <span class="title">{{title}}</span>
-                  <span class="after-title">{{afterTitle}}</span>
-                </div>
-                <div class="line">
-                    {{#tags}}
-                    <span class="tag">{{.}}</span>
-                    {{/tags}}
-                </div>
-                {{#quote}}
-                <p class="quote">{{{.}}}</p>
-                {{/quote}}
-                {{#description}}
-                <p class="description">{{{.}}}</p>
-                {{/description}}
-              </section>
-              {{/work.list}}
-
-              <hr class="separator"/>
+              <div class="timeline-content">
+                <div class="timeline-up"></div>
+                <ul class="timeline">
+                  {{#work.list}}
+                  <li class="event" data-date="{{date}}">
+                    <div class="timeline-logo logo" style="background-image: url(/img/{{id}}-logo.png);"></div>
+                    <div class="event-content">
+                    <div class="line job-line2">
+                      <span class="title">{{title}}</span>
+                      <span class="after-title">{{afterTitle}}</span>
+                    </div>
+                    <div class="line">
+                      {{#tags}}
+                        <span class="tag">{{.}}</span>
+                      {{/tags}}
+                    </div>
+                    <div class="more-button" onclick="toggle(this, 'work_{{id}}')" >More information <i class="fas fa-chevron-down"></i></div>
+                    <div class="additional-content" id="work_{{id}}" >
+                      <div class="banner" style="background-image: url(/img/{{id}}-banner.png);"></div>
+                      {{#quote}}
+                      <p class="quote">{{{.}}}</p>
+                      {{/quote}}
+                      {{#description}}
+                      <p class="description">{{{.}}}</p>
+                      {{/description}}
+                      {{#link}}
+                      <p class="link">
+                      <span class="fas fa-external-link-alt"></span>
+                      <a href="{{link}}">Company page</a>
+                      </p>
+                      {{/link}}
+                    </div>
+                  </li>
+                  {{/work.list}}
+                </ul>
+                <div class="timeline-down"></div>
+              </div>
             </section>
 
+            <!-- Skills section -->
+
+            <section class="section">
+              <span class="anchor" id="skills-anchor"></span>
+              <h1 class="section-title" id="skills">{{{skills.title}}}</h1>
+              <div class="timeline-content">
+                {{#skills.list}}
+                <section class="section-element wavy">
+                  <div class="line job-line">
+                    <div class="timeline-logo logo">
+                      <img class="icon" height="50" width="50" src="https://unpkg.com/simple-icons@v3/icons/{{icon}}.svg"/>
+                    </div>
+                    <span class="title">{{title}}</span>
+                    <span class="after-title">{{afterTitle}}</span>
+                  </div>
+                  <div class="line">
+                    {{#tags}}
+                    <span class="tag">{{{.}}}</span>
+                    {{/tags}}
+                  </div>
+                  <div class="line">
+                    <div class="more-button" onclick="toggle(this, 'skill_{{id}}')" >More information <i class="fas fa-chevron-down"></i></div>
+                  </div>
+                  <div class="additional-content" id="skill_{{id}}" >
+                    <div class="banner" style="background-image: url(/img/{{id}}-banner.png);"></div>
+                    {{#quote}}
+                    <p class="quote">{{{.}}}</p>
+                    {{/quote}}
+                    {{#description}}
+                    <p class="description">{{{.}}}</p>
+                    {{/description}}
+                  </div>
+                </section>
+                {{/skills.list}}
+                <div class="wavy-down"></div>
+              </div>
+            </section>
+            
             <!-- Education -->
 
             <section class="section">
               <span class="anchor" id="education-anchor"></span>
-              <h1 class="section-title" id="education">{{{education.title}}}
-              </h1>
-
-              {{#education.list}}
-              <section class="section-element">
-                <span class="tag date2">{{date}}</span>
-                <span class="title">{{title}}</span>
-                <span class="after-title">{{afterTitle}}</span>
-                <p class="detail">{{detail}}</p>
-                {{#quote}}
-                <p class="quote">{{{.}}}</p>
-                {{/quote}}
-                {{#link}}
-                <p class="link">
-                <span class="fas fa-external-link-alt"></span>
-                <a href="{{url}}">{{text}}</a>
-                </p>
-                {{/link}}
-              </section>
-              {{/education.list}}
-            
-
-              <hr class="separator"/>
+              <h1 class="section-title" id="education">{{{education.title}}}</h1>
+              <div class="timeline-right timeline-content">
+                <div class="timeline-up"></div>
+                <ul class="timeline">
+                  {{#education.list}}
+                  <li class="event" data-date="{{date}}">
+                    <div class="timeline-logo logo" style="background-image: url(/img/{{logo}});"></div>
+                    <div class="event-content">
+                    <div class="line job-line2">
+                      <span class="title">{{title}}</span>
+                      <span class="after-title">{{afterTitle}}</span>
+                    </div>
+                    <div class="line">
+                      <p class="detail">{{detail}}</p>
+                    </div>
+                    {{#quote}}
+                    <div class="line">
+                      <div class="more-button" onclick="toggle(this, 'eductation_{{id}}')" >More information <i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="additional-content" id="eductation_{{id}}" >
+                      <div class="banner" style="background-image: url(/img/{{banner}});"></div>
+                      <p class="quote">{{{quote}}}</p>
+                      {{#link}}
+                      <p class="link">
+                      <span class="fas fa-external-link-alt"></span>
+                      <a href="{{url}}">{{text}}</a>
+                      </p>
+                      {{/link}}
+                    </div>
+                    {{/quote}}
+                  </li>
+                  {{/education.list}}
+                </ul>
+                <div class="timeline-down"></div>
+              </div>
             </section>
 
             <!-- Personal projects -->
@@ -160,8 +192,10 @@
               <span class="anchor" id="projects-anchor"></span>
               <h1 class="section-title" id="projects">{{{projects.title}}}</h1>
 
+
+              <div class="cards timeline-content">
               {{#projects.list}}
-              <section class="section-element">
+              <section class="card">
                 <div class="line">
                   <span class="title">{{title}}</span>
                   <span class="after-title">{{afterTitle}}</span>
@@ -171,32 +205,39 @@
                   <span class="tag">{{.}}</span>
                   {{/tags}}
                 </div>
-                {{#quote}}
-                <p class="quote">{{.}}</p>
-                {{/quote}}
-                {{#description}}
-                <p class="description">{{.}}</p>
-                {{/description}}
-                <span style="display: flex">
-                {{#github}}
-                <span style="text-align: center">
-                  <p class="link">
-                    <span class="fab fa-github"></span>
-                    <a href="https://github.com/{{.}}">github.com/{{.}}</a>
-                  </p>
-                </span>
-                {{/github}}
-                {{#npm}}
-                <span style="text-align: center">
-                  <p class="link">
-                    <span class="fab fa-npm"></span>
-                    <a href="https://npmjs.com/package/{{.}}">npmjs.com/package/{{.}}</a>
-                  </p>
-                </span>
-                {{/npm}}
-                </span>
+                <div class="line">
+                  <div class="more-button" onclick="toggle(this, 'project_{{id}}')" >More information <i class="fas fa-chevron-down"></i></div>
+                </div>
+
+                <div class="additional-content" id="project_{{id}}" >
+                  {{#quote}}
+                  <p class="quote">{{.}}</p>
+                  {{/quote}}
+                  {{#description}}
+                  <p class="description">{{.}}</p>
+                  {{/description}}
+                  <span style="display: flex">
+                  {{#github}}
+                  <span style="text-align: center">
+                    <p class="link">
+                      <span class="fab fa-github"></span>
+                      <a href="https://github.com/{{.}}">github.com/{{.}}</a>
+                    </p>
+                  </span>
+                  {{/github}}
+                  {{#npm}}
+                  <span style="text-align: center">
+                    <p class="link">
+                      <span class="fab fa-npm"></span>
+                      <a href="https://npmjs.com/package/{{.}}">npmjs.com/package/{{.}}</a>
+                    </p>
+                  </span>
+                  {{/npm}}
+                  </span>
+                </div>
               </section>
               {{/projects.list}}
+              </div>
 
               <hr class="separator"/>
             </section>  
@@ -209,8 +250,8 @@
 
         <section id="sticky-menu" class="menu">
           <div class="menu-items">
-            <a id="skills-menu" href="#skills-anchor"><h2 class="menu-link">{{menu.skills}}</h2></a>
             <a id="work-menu" href="#work-anchor"><h2 class="menu-link">{{menu.work}}</h2></a>
+            <a id="skills-menu" href="#skills-anchor"><h2 class="menu-link">{{menu.skills}}</h2></a>
             <a id="education-menu" href="#education-anchor"><h2 class="menu-link">{{menu.education}}</h2></a>
             <a id="projects-menu" href="#projects-anchor"><h2 class="menu-link">{{menu.projects}}</h2></a>
           </div>
@@ -219,6 +260,22 @@
     </body>
 
     <script>
+
+      function toggle(button, id) {
+        var element = document.getElementById(id)
+
+        if (button) {
+          if (button.innerHTML.startsWith('Less'))
+            button.innerHTML = 'More information <i class="fas fa-chevron-down"></i>'
+          else
+            button.innerHTML = 'Less information <i class="fas fa-chevron-up"></i>'
+        }
+
+        if (element) {
+          element.classList.toggle('visible')
+        }
+      }
+
       window.onscroll = () => updateSticky()
 
       var headerMenu = document.getElementById("header-menu")
@@ -245,18 +302,18 @@
         }
       }
       
-      var skills = document.getElementById("skills")
       var work = document.getElementById("work")
+      var skills = document.getElementById("skills")
       var education = document.getElementById("education")
       var projects = document.getElementById("projects")
 
-      var skillsMenu = document.getElementById("skills-menu").childNodes[0]
       var workMenu = document.getElementById("work-menu").childNodes[0]
+      var skillsMenu = document.getElementById("skills-menu").childNodes[0]
       var educationMenu = document.getElementById("education-menu").childNodes[0]
       var projectsMenu = document.getElementById("projects-menu").childNodes[0]
 
-      var list = [skills, work, education, projects]
-      var menus = [skillsMenu, workMenu, educationMenu, projectsMenu]
+      var list = [work, skills, education, projects]
+      var menus = [workMenu, skillsMenu, educationMenu, projectsMenu]
 
       document.addEventListener('scroll', function () {
         for (let i = 0; i < list.length; i++) {
