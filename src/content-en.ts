@@ -18,10 +18,10 @@ export const content = {
         to always come up with a solution that I can be proud of.
     `,
     menu: {
-        work: 'Where did I worked?',
+        work: 'Where did I work?',
         skills: 'What do I know?',
-        projects: 'Any personnal projects?',
-        education: 'Where did I studied?'
+        projects: 'Any personal projects?',
+        education: 'Where did I study?'
     },
     skills: {
         title: `What do I <span class="colored" >know</span> ?`,
@@ -29,17 +29,17 @@ export const content = {
             {
                 icon: 'buffer',
                 title: 'Software Architecture',
-                afterTitle: 'Functionnal Programming',
+                afterTitle: 'Stateless and reactive',
                 tags: [
                     'Micro-services', 'Reactive', 'Stateless', 'Distributed Systems'
                 ],
                 description: [
                     `I had the opportunity to see many ways of responding to different technical challenges about the architecture of a software or system ; ranging from
-                     a heavy client, a simple stateless web application, services communicating by messages to an event streaming system composed of hundreds of nano-services.`,
+                     a heavy client, a simple stateless web application, or even services communicating by messages to an event streaming system composed of hundreds of nano-services.`,
                     `I was finally able to implement for the first time what I had learned at <span class="colored">ReachFive</span>, where the existing monolithic software was modularized
-                     in services. I thus had the opportunity to reduce interdependencies to a minimum and end with almost independent specialized modules. Some services
+                     into services. I thus had the opportunity to reduce interdependencies to a minimum and end with almost independent specialized modules. Some services
                      would then be added following the same model (for example an asynchronous worker, unstacking tasks ready to be performed). This was done along with a 
-                     more classical refactgring of the codebase to reduce and contain the technical debt.`,
+                     more classical refactoring of the codebase to reduce and contain the technical debt.`,
                     `<span class="colored">Ditto Service</span> and <span class="colored">Memo</span> also share this same service decoupling approach, but have different way of overcoming that
                     challenge. Where <span class="colored">Ditto</span> has made the choice of using function-sized nano-services, <span class="colored">Memo</span> made the choice of
                     a breakdown by domain; both using a message broker to propagate actions in their respective systems.`
@@ -48,7 +48,7 @@ export const content = {
             {
                 icon: 'scala',
                 title: 'Scala',
-                afterTitle: 'Functionnal Programming',
+                afterTitle: 'Functional Programming',
                 tags: [
                     'FP', 'Lightbend (Play, Akka)', 'Typelevel (Cats, Shapeless, Doobie)', 'Scalaz', 'sbt', 'macro'
                 ],
@@ -58,14 +58,14 @@ export const content = {
                 `,
                 description: [
                     `Functional programming brings additional security to compilation, allowing to rely solely on static validation where <span class="colored">Java</span>,
-                     for example, often has to rely on testing in addition to compilation to validate the validity of its code. This paradigm also allows you to think differently 
-                     about your code, and to write a clearer declarative code more representative of your intentions.`,
-                    `After discovering <span class="colored">Scala</span> (and more broadly functional programming) in school, I had the opportunity to building up 
+                     for example, often has to rely on testing in addition to compilation to validate a piece of code. This paradigm allows to think differently 
+                     about writing code, and result in a clear and declarative code, representative of your intentions.`,
+                    `After discovering <span class="colored">Scala</span> (and more broadly functional programming) in school, I had the opportunity to build up 
                      my knowledge during my time at <span class="colored">Zengularity</span>, where I learned how to get the best out of it from the same people actively 
                      participating in the life of the language ecosystem.`,
-                    `I then had the perfect occasion to use my knowledge at <span class="colored">ReachFive</span> and then later at <span class="colored">Ditto Services</span>
+                    `I then had the perfect occasion to use my newly acquired knowledge at <span class="colored">ReachFive</span> and then later at <span class="colored">Ditto Services</span>
                      to build applications that are both complex (due to their respective functional scope) and robust, by relying on the <span class="colored">Scala</span> 
-                     language, its paradigm, and as well as on the entire ecosystem that revolves around it.`
+                     language, its paradigm, and as well on the entire ecosystem that revolves around it.`
                 ]
             },
             {
@@ -80,34 +80,35 @@ export const content = {
                 `,
                 description: [
                      `In addition to providing typing, <span class="colored">TypeScript</span> also allows for a more descriptive approach to be explored in the
-                      way of building applications (for example with <span class="colored">React</span> which use a declarative way of defining components).`,
+                      way of building applications (for example along with <span class="colored">React</span> which also use a declarative way of defining components).`,
                      `I used it extensively in frontend development (along with <span class="colored">JavaScript</span>) to build many web applications, of 
-                      varying sizes and scopes. Where the <span class="colored">JavaScript</span> would have made it difficult, the usage of 
-                      <span class="colored">TypeScript</span> gave us the consistency necessary to work in team with a large codebase on a complex domain.`,
-                     `Finally, I have also had the opportunity to use it on the server side with <span class="colored">NodeJS</span> on many personal projects.
+                      varying sizes and scopes. <span class="colored">TypeScript</span> gave us the consistency necessary to work in team on a large codebase
+                      with a complex functional domain.`,
+                     `Finally, I also had the opportunity to use it on the server side with <span class="colored">NodeJS</span> on many personal projects.
                       Easy to set up and quick to develop, typing ensures code clarity and longevity. Finally, the <span class="colored">JavaScript</span> 
-                      ecosystem ensures that many libraries are mature enough (and for the most part already typed).` 
+                      ecosystem ensures that many libraries are mature enough (and for the most part already typed) to be production ready.` 
                 ]
             },
             {
                 icon: 'kotlin',
                 title: 'Kotlin & Java',
-                afterTitle: 'Backend & Frontend',
+                afterTitle: 'Software Engineering',
                 tags: [
                     'Spring Boot', 'Vert.x', 'JEE', 'Hibernate, JPA', 'Swing, JavaFX', 'Android'
                 ],
                 quote: `
-                    Kotlin is a cross-platform, statically typed, general-purpose programming language with type inference. Kotlin is designed to interoperate fully with Java, but type inference allows its syntax to be more concise.
+                    Kotlin is a cross-platform, statically typed, general-purpose programming language with type inference. Kotlin is designed to interoperate fully 
+                    with Java, with a more concise syntax thanks to type inference.
                 `,
                 description: [
                     `Like <span class="colored">Scala</span>, <span class="colored">Kotlin</span> is also positioned as a « better <span class="colored">Java</span> », borrowing
-                     notions of functional language while remaining strongly object oriented by nature. Unlike the <span class="colored">Scala</span> it is positioned closer to 
-                     <span class="colored">Java</span> in its philosophy, and is not intended to be a functional language (even if it borrows some syntax from it). Interoparability with
+                     notions of functional language while remaining strongly object oriented by nature. Unlike <span class="colored">Scala</span>, it is positioned closer to 
+                     <span class="colored">Java</span> in its philosophy, and is not intended to be a functional language (even with the borrowed syntax). Interoparability with
                      <span class="colored">Java</span> also helps to make the transition between the two languages as transparent and quick as possible.`,
                     `After having spent almost 2 years of <span class="colored">Java</span> during my work-study program and having quickly abandoned this language in favor of <span class="colored">Scala</span>,
-                     I had the opportunity to discover and learn <span class="colored">Kotlin</span> at <span class="colored">Memo Bank</span>. Easy to approach after having use
+                     I had the opportunity to discover and learn <span class="colored">Kotlin</span> at <span class="colored">Memo Bank</span>. Easy to approach after having used
                      <span class="colored">Scala</span>, the language corrects many <span class="colored">Java</span> limitations and flaws due to its more modern approach and stronger typing.
-                     It allows us at Memo to represent a complex business domain (as banks often are) in a clear and robust way, maintaining a high-quality code.
+                     It allows us at <span class="colored">Memo</span> to represent a complex business domain (as banks often are) in a clear and robust way, maintaining a high-quality code.
                      The interoperability with <span class="colored">Java</span> libraries allow us to take advantage of a rich and mature ecosystem, ensuring the best of both worlds.`
                 ]
             },
@@ -119,12 +120,12 @@ export const content = {
                     'SQL (PostgreSQL, Oracle DB)', 'ElasticSearch', 'MongoDB', 'Redis'
                 ],
                 description: [
-                    `I've used SQL database in almost all my projects, from <span class="colored">MySQL</span> when I still was learning the ropes, to <span class="colored">Oracle DB</span>
+                    `I've used SQL database in almost all my projects, from <span class="colored">MySQL</span> when I was still learning the ropes, to <span class="colored">Oracle DB</span>
                      for larger companies when I was at <span class="colored">Zengularity</span> to PostgreSQL at <span class="colored">Memo</span> ; in application ranging from a 
                      REST service to a core banking system.`,
-                    `I had the chance of using <span class="colored">MongoDB</span> for the first time at <span class="colored">Zengularity</span> in the particularly challenging application,
-                     using event sourcing to trace all modifications on missions. <span class="colored">Mongo</span> brought us a lot of usefull features (like being document oriented, allowing 
-                     us to direclty use JSON, and the scaling promises), altough with a few drawback (mainly not being able to have relationship and not being able to efficiently lock a document like
+                    `I had the chance of using <span class="colored">MongoDB</span> for the first time at <span class="colored">Zengularity</span> in a particularly challenging application,
+                     using event sourcing to trace all modifications. <span class="colored">Mongo</span> brought us a lot of usefull features (like being document oriented, allowing 
+                     us to direclty use JSON, along with the scaling promises), altough with a few drawbacks (mainly not being able to have relationships nor ebing able to efficiently lock a document like
                      SQL bases usually allow it)`,
                     `I had a more mixed experience with <span class="colored">ElasticSearch</span>, as I sadly saw it used as a main database, bringing issues on the data consistency (as
                      <span class="colored">ES</span> is by default eventually consistent) and on its performance (since they had to force the refresh after each operation). Fortunately, we use 
@@ -140,11 +141,11 @@ export const content = {
                     'Docker, Docker compose', 'Terraform', 'Linux', 'Jenkins, Hudson, Circle-ci', 'SonarQube'
                 ],
                 description: [
-                    `At my current job I mainly use <span class="colored">Docker</span> to define isolated and easily deployable work environments, allowing to replicate an 
+                    `At my current job and on my personal projects I mainly use <span class="colored">Docker</span> to define isolated and easily deployable work environments, allowing to replicate an 
                      architecture and associated services locally. I also had the opportunity to define containers used in production in a <span class="colored">Kubernetes</span> 
                      during my time at <span class="colored">Ditto Service</span>.`,
-                    `I also had the opportunity to work on the <span class="colored">Jenkins</span> configuration on some projects where I worked, whether simply
-                     on continuous integration or continuous deployment. I also used <span class="colored">Circle-ci</span> and <span class="colored">Travis</span>
+                    `I also had the opportunity to work on the <span class="colored">Jenkins</span> configuration on some projects, whether simply
+                     on continuous integration or on continuous deployment. I also used <span class="colored">Circle-ci</span> and <span class="colored">Travis</span>
                      for similar purposes.`,
                     `Finally, I take care of my <span class="colored">Linux</span> server myself, more by hobby than by necessity, using <span class="colored">Docker</span> 
                      to isolate my different services. This server host, among other things, the page you're currently reading.`
@@ -153,7 +154,7 @@ export const content = {
         ]
     },
     work: {
-        title: `Where did I <span class="colored">worked</span>? <img class="illustration tmp" src="img/mug.png" />`,
+        title: `Where did I <span class="colored">work</span>? <img class="illustration tmp" src="img/mug.png" />`,
         list: [
             {
                 icon: 'memo2.png',
@@ -175,9 +176,9 @@ export const content = {
                     `Creation of a core banking system from scratch, using modern and secure technologies, ensuring that our banking system complies 
                      with all the auditability, security and performance constraints to which banks are subjected to. Integration with other external tools 
                      to communicate with other banks.`,
-                    `Event sourcing is used for the ledger handling validation of currency operations on accounts in order to ensure total auditability and 
-                     strong consistency on our data. Automatic export of this data in regulatory reports.`,
-                    `Project developed in Kotlin (Spring, Hibernate) & Elixir (Event sourcing part) with PostgreSQL as our main database, ActiveMQ 
+                    `Event sourcing is used for the ledger, responsible for handling and validating all account operations, to ensure a total auditability and 
+                     strong consistency of our data. Automatic export of this data in regulatory reports is also made possible by this approach.`,
+                    `Project developed in Kotlin (Spring, Hibernate) & Elixir (Ledger part) with PostgreSQL as our main database, ActiveMQ 
                     as our messaging queue and Kafka as our message broker.`
                 ]
             },
@@ -197,9 +198,9 @@ export const content = {
                     et de Résolution, they are developing the latest generation technological platform for the digital bank of tomorrow.
                 `,
                 description: [
-                    `Creation of the <span class="colored">Ditto Services</span> new generation platform from scratch, using a micro-services based architecture
-                     communicating with event-streaming, ensuring maximum decoupling between the different functional bricks.`,
-                    `Project developed in Scala (Akka-http, Akka-actor, Cats, Fs2, Doobie, Cats-Effect) with PostgreSQL as our main database 
+                    `Creation of the <span class="colored">Ditto Services</span> new generation platform from scratch, using a nano-services based architecture,
+                     communicating exclusively with event-streaming, ensuring maximum decoupling between the different functional bricks.`,
+                    `Project developed in Scala (Akka-http, Akka-actor, Cats, Fs2, Doobie, Cats-Effect) with PostgreSQL as our main database on each nano-service, 
                      and Kafka as our message broker.`
                 ]
             },
@@ -233,12 +234,12 @@ export const content = {
                 ],
                 quote: `
                     <span class="colored">Zengularity</span> (who joined the <span class="colored">Fabernovel</span> family in 2019) is a French 
-                    company specializing in digital transformation and the web of tomorrow. Adept of new technologies, they offers adapted and modern 
+                    company specializing in digital transformation and the web of tomorrow. Adept of new technologies, they offer adapted and modern 
                     solutions to companies wishing to carry out their digital revolution.<br/><br/>
                     <span class="colored">Zengularity</span> is also the birthplace of the Play Framework, known worldwide and used by the largest companies.
                 `,
                 description: [
-                    `Development of a web platform facilitating the communication of the various parties in the mutual insurance business, 
+                    `Development of a web platform facilitating the communication of the various parties in the insurance business, 
                      in order to support them in their digital transition. Made using event sourcing to reflect the state changes of an insurance mission, and
                      to provide an auditable history.`,
                     `Project developed in Scala (Play Framework, Shapeless & Scalaz) and TypeScript (ReactJS, Flux & Less), with MongoDB as our main database.`,
@@ -273,7 +274,7 @@ export const content = {
                     'Java', 'JEE', 'JavaFX', 'Spring'
                 ],
                 quote: `
-                    <span class="colored">Alter Frame</span> is <span class="colored">Alter</span> Group’s software publisher and development structure. This structure aims to bring quality as an added value  
+                    <span class="colored">Alter Frame</span> is <span class="colored">Alter Solutions</span> group’s software publisher and development structure. This structure aims to bring quality as an added value  
                     in the realization of full-web solutions and in the development of IT projects.
                 `,
                 description: [
@@ -309,7 +310,7 @@ export const content = {
         ]
     },
     education: {
-        title: `Where did I <span class="colored">studied</span>?
+        title: `Where did I <span class="colored">study</span>?
                 <img class="illustration tmp" src="img/university.png" />
         `,
         list: [
@@ -346,13 +347,13 @@ export const content = {
         ]
     },
     projects: {
-        title: `Any <span class="colored">personnal project</span> to show?`,
+        title: `Any <span class="colored">personal project</span> to show?`,
         list: [
             {
                 title: 'Cumulus',
                 afterTitle: 'Secure File Storage Server',
                 tags: [ 'Scala', 'Akka HTTP', 'Akka Streams' ],
-                quote: `File storage server made in Scala with Akka-http. Stored files can be compressed and encrypted. Files can also be streamed, make it possible to stream 
+                quote: `File storage server made in Scala with Akka-http. Stored files can be compressed and encrypted. Files can also be streamed, making it possible to stream 
                         videos via HTML5 for supported formats (MP4, Webm).
                 `,
                 description: [
@@ -368,10 +369,10 @@ export const content = {
                 title: 'Raspi-sensor',
                 afterTitle: 'Node.js C++ Plugin',
                 tags: [ 'Rapsberry Pi', 'C++', 'Node.js' ],
-                quote: `NodeJS plugin made in C ++ allowing the use in JavaScript of
-                        information from different sensors connected to a RapsberryPi.
+                quote: `NodeJS plugin made in C ++ allowing in JavaScript to collect
+                        data from different sensors connected to a RapsberryPi.
                         Currently DHT22 (temperature and humidity), BMP 180 (temperature
-                        and pressure) and TLS261 (brightness) are supported.
+                        and pressure), TLS261 (brightness) and PIR (infrared sensor) are supported.
                 `,
                 description: [
                     `The plugin adopts an asynchronous operation dear to JavaScript, and

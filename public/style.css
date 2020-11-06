@@ -49,6 +49,8 @@ a {
 
 .title {
     font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
 }
 
 .title::after {
@@ -57,6 +59,7 @@ a {
 
 .after-title {
     font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
     color: #B3B3B3;
 }
 
@@ -235,6 +238,8 @@ p {
     color: #606060;
     padding-bottom: 5px;
     border-bottom: 4px solid transparent;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
 }
 
 .menu-link:hover {
