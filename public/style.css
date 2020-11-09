@@ -33,7 +33,6 @@ a {
 
 .main {
     max-width: 800px;
-    padding-top: 30px;
 }
 
 .logo {
@@ -145,7 +144,7 @@ hr.separator {
 .section-title {
     border-left: 4px solid #178FC6;
     text-align: justify;
-    font-size: 55px;
+    font-size: 44px;
     padding-left: 40px;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -162,6 +161,8 @@ hr.separator {
 }
 
 .name {
+    margin-top: 45px;
+    margin-bottom: 45px;
     width: 825px;
     font-size: 64px;
 }
@@ -185,6 +186,7 @@ hr.separator {
     display: flex;
     flex-direction: row;
     padding: 30px;
+    padding-top: 0;
 }
 
 .presentation > *:first-child {
@@ -216,7 +218,8 @@ p {
 .icons {
     flex-direction: row;
     justify-content: center;
-    margin-top: 70px;
+    margin-top: 20px;
+    margin-bottom: -50px;
 }
 
 .icons > * {
@@ -228,8 +231,6 @@ p {
 }
 
 .menu {
-    width: 100%;
-    padding-top: 20px;
     margin-bottom: 25px;
     font-size: 14px;
     display: flex;
@@ -292,6 +293,10 @@ p {
 
 .link .fab {
     width: 25px;
+}
+
+.link a {
+    margin-left: 5px;
 }
 
 .slide-in {

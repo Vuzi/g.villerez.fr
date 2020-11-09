@@ -67,7 +67,7 @@ export const content = {
                      participating in the life of the language ecosystem.`,
                     `I then had the perfect occasion to use my newly acquired knowledge at <span class="colored">ReachFive</span> and then later at <span class="colored">Ditto Services</span>
                      to build applications that are both complex (due to their respective functional scope) and robust, by relying on the <span class="colored">Scala</span> 
-                     language, its paradigm, and as well on the entire ecosystem that revolves around it.`
+                     language, its paradigm, and as well on the entire ecosystem that revolves around.`
                 ]
             },
             {
@@ -111,8 +111,8 @@ export const content = {
                      <span class="colored">Java</span> also helps to make the transition between the two languages as transparent and quick as possible.`,
                     `After having spent almost 2 years of <span class="colored">Java</span> during my work-study program and having quickly abandoned this language in favor of <span class="colored">Scala</span>,
                      I had the opportunity to discover and learn <span class="colored">Kotlin</span> at <span class="colored">Memo Bank</span>. Easy to approach after having used
-                     <span class="colored">Scala</span>, the language corrects many <span class="colored">Java</span> limitations and flaws due to its more modern approach and stronger typing.
-                     It allows us at <span class="colored">Memo</span> to represent a complex business domain (as banks often are) in a clear and robust way, maintaining a high-quality code.
+                     <span class="colored">Scala</span>, the language corrects many <span class="colored">Java</span> limitations and flaws due to its more modern approach and stronger typing.`, 
+                    `<span class="colored">Kotlin</span> allows us at <span class="colored">Memo</span> to represent a complex business domain (as banks often are) in a clear and robust way, maintaining a high-quality code.
                      The interoperability with <span class="colored">Java</span> libraries allow us to take advantage of a rich and mature ecosystem, ensuring the best of both worlds.`
                 ]
             },
@@ -271,7 +271,7 @@ export const content = {
                 `,
                 description: [
                     `Course on the « developer Tools » given to 3rd year students specializing in Software Architecture.`,
-                    `Course on version management software (git), git related workflows, clean code and related tools, and an introduction on continuous integration.`
+                    `Version management software (git, github, gitlab), git related workflows, clean code and related tools (linters), and an introduction on continuous integration.`
                 ],
                 link: 'https://www.esgi.fr/'
             },
