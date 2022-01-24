@@ -5,4 +5,6 @@ My personal resumé website
   <img src="https://i.imgur.com/beg4BBp.png" width="550">
 </p>
 
-Somewhat proudly propulsed by a JavaScript server (NodeJS + TypeScript + Express) with simplistic templating (Mustache).
+Simplistic CV-website using my own <a href="https://github.com/Vuzi/mrHyde">templating engine</a> and running through Github Pages 🧙.
+
+<a href="https://g.villerez.fr">See for yourself 🚀</a>

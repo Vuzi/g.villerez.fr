@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Guillaume Villerez | CV</title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="icon" href="public/favicon.ico" />
+        <link rel='stylesheet' type='text/css' media='screen' href='public/style.css'>
+        <link rel='stylesheet' type='text/css' media='screen' href='public/all.min.css'>
+
+        <!-- Unfurl -->
+        <meta property="og:title" content="Guillaume Villerez | CV"/>
+        <meta property="og:description" content="Hello! My name is Guillaume and I'm a Software Engineer at Memo Bank."/>
+        <meta property="og:site_name" content="g.villerez.com"/>
+
+    </head>
+    <body style="min-width: 1100px;" >
+      {% if error %}
+        <section class="main">
+          <section class="section">
+            <h1 class="section-title" style="margin-top: 100px;">Oh no! An error {{error.code}} occurred :(</h1>
+            <p class="quote">{{error.message}}</p>
+            <div style="text-align: center; margin-top: 90px;" >
+              <a href="/"><h2 class="menu-link">Go back to the website</h2></a>
+            </div>
+          </section>
+        </section>
+      {% else %}
+        <section class="main">
+          <!-- Into -->
+
+          <section class="section">
+            <h1 class="section-title name">{{title}}</h1>
+
+            <section id="header-menu" class="menu">
+              <div class="menu-items">
+                <a href="#skills-anchor"><h2 class="menu-link">{{menu.skills}}</h2></a>
+                <a href="#work-anchor"><h2 class="menu-link">{{menu.work}}</h2></a>
+                <a href="#education-anchor"><h2 class="menu-link">{{menu.education}}</h2></a>
+                <a href="#projects-anchor"><h2 class="menu-link">{{menu.projects}}</h2></a>
+              </div>
+            </section>
+            <section class="presentation">
+              <p>{{intro1}}</p>
+              <span class="photo"></span>
+            </section>
+
+            <section class="presentation">
+              <img class="illustration" src="public/img/code.png" />
+              <p>{{intro2}}</p>
+            </section>
+
+            <div class="line icons">
+              <span class="trait"></span>
+              <a href="https://github.com/Vuzi"><i class="icon fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/villerez/"><i class="icon fab fa-linkedin"></i></a>
+              <a href="mailto:guillaume@villerez.fr"><i class="icon far fa-envelope"></i></a>
+              <span class="trait"></span>
+            </div>
+
+          </section>
+
+          <!-- Work experience section -->
+
+          <section class="section">
+            <span class="anchor" id="work-anchor"></span>
+            <h1 class="section-title" id="work">{{work.title}}</h1>
+            <div class="timeline-content">
+              <div class="timeline-up"></div>
+              <ul class="timeline">
+                {% for work in work.list %}
+                <li class="event" data-date="{{work.date}}">
+                  <div class="timeline-logo logo" style="background-image: url(public/img/{{work.id}}-logo.png);"></div>
+                  <div class="event-content">
+                  <div class="line job-line2">
+                    <span class="title">{{work.title}}</span>
+                    <span class="after-title">{{work.afterTitle}}</span>
+                  </div>
+                  <div class="line">
+                    {% for tag in work.tags %}
+                      <span class="tag">{{tag}}</span>
+                    {% endfor %}
+                  </div>
+                  <div class="more-button" onclick="toggle(this, 'work_{{work.id}}')" >More information <i class="fas fa-chevron-down"></i></div>
+                  <div class="additional-content" id="work_{{work.id}}" >
+                    <div class="banner" style="background-image: url(public/img/{{work.id}}-banner.png);"></div>
+                    {% if work.quote %}
+                    <p class="quote">{{work.quote}}</p>
+                    {% endif %}
+                    {% for description in work.description %}
+                    <p class="description">{{description}}</p>
+                    {% endfor %}
+                    {% if work.link %}
+                    <p class="link">
+                    <span class="fas fa-external-link-alt"></span>
+                    <a href="{{work.link}}">Company page</a>
+                    </p>
+                    {% endif %}
+                  </div>
+                </li>
+                {% endfor %}
+              </ul>
+              <div class="timeline-down"></div>
+            </div>
+          </section>
+        
+          <!-- Skills section -->
+
+          <section class="section">
+            <span class="anchor" id="skills-anchor"></span>
+            <h1 class="section-title" id="skills">{{skills.title}}</h1>
+            <div class="timeline-content">
+              {% for skill in skills.list %}
+              <section class="section-element wavy">
+                <div class="line job-line">
+                  <div class="timeline-logo logo">
+                    <img class="icon" height="50" width="50" src="public/img/{{skill.icon}}.svg"/>
+                  </div>
+                  <span class="title">{{skill.title}}</span>
+                  <span class="after-title">{{skill.afterTitle}}</span>
+                </div>
+                <div class="line">
+                  {% for tag in skill.tags %}
+                    <span class="tag">{{tag}}</span>
+                  {% endfor %}
+                </div>
+                <div class="line">
+                  <div class="more-button" onclick="toggle(this, 'skill_{{skill.id}}')" >More information <i class="fas fa-chevron-down"></i></div>
+                </div>
+                <div class="additional-content" id="skill_{{skill.id}}" >
+                  <div class="banner" style="background-image: url(public/img/{{skill.id}}-banner.png);"></div>
+                  {% if skill.quote %}
+                  <p class="quote">{{skill.quote}}</p>
+                  {% endif %}
+                  {% for description in skill.description %}
+                  <p class="description">{{description}}</p>
+                  {% endfor %}
+                </div>
+              </section>
+              {% endfor %}
+              <div class="wavy-down"></div>
+            </div>
+          </section>
+        
+          <!-- Education -->
+
+          <section class="section">
+            <span class="anchor" id="education-anchor"></span>
+            <h1 class="section-title" id="education">{{educations.title}}</h1>
+            <div class="timeline-right timeline-content">
+              <div class="timeline-up"></div>
+              <ul class="timeline">
+                {% for education in educations.list %}
+                <li class="event" data-date="{{education.date}}">
+                  <div class="timeline-logo logo" style="background-image: url(public/img/{{education.logo}});"></div>
+                  <div class="event-content">
+                  <div class="line job-line2">
+                    <span class="title">{{education.title}}</span>
+                    <span class="after-title">{{education.afterTitle}}</span>
+                  </div>
+                  <div class="line">
+                    <p class="detail">{{education.detail}}</p>
+                  </div>
+                  {% if education.quote %}
+                  <div class="line">
+                    <div class="more-button" onclick="toggle(this, 'eductation_{{education.id}}')" >More information <i class="fas fa-chevron-down"></i></div>
+                  </div>
+                  <div class="additional-content" id="eductation_{{education.id}}" >
+                    <div class="banner" style="background-image: url(public/img/{{education.banner}});"></div>
+                    <p class="quote">{{education.quote}}</p>
+                    {% if education.link %}
+                    <p class="link">
+                    <span class="fas fa-external-link-alt"></span>
+                    <a href="{{education.link.url}}">{{education.link.text}}</a>
+                    </p>
+                    {% endif %}
+                  </div>
+                  {% endif %}
+                </li>
+                {% endfor %}
+              </ul>
+              <div class="timeline-down"></div>
+            </div>
+          </section>
+        
+          <!-- Personal projects -->
+
+          <section class="section">
+            <span class="anchor" id="projects-anchor"></span>
+            <h1 class="section-title" id="projects">{{projects.title}}</h1>
+
+
+            <div class="cards timeline-content">
+              {% for project in projects.list %}
+              <section class="card">
+                <div class="line">
+                  <span class="title">{{project.title}}</span>
+                  <span class="after-title">{{project.afterTitle}}</span>
+                </div>
+                <div class="line">
+                  {% for tag in project.tags %}
+                    <span class="tag">{{tag}}</span>
+                  {% endfor %}
+                </div>
+                <div class="line">
+                  <div class="more-button" onclick="toggle(this, 'project_{{project.id}}')" >More information <i class="fas fa-chevron-down"></i></div>
+                </div>
+
+                <div class="additional-content" id="project_{{project.id}}" >
+                  {% if project.quote %}
+                  <p class="quote">{{project.quote}}</p>
+                  {% endif %}
+                  {% for description in project.description %}
+                  <p class="description">{{description}}</p>
+                  {% endfor %}
+                  <span style="display: flex">
+                  {% if project.github %}
+                  <span style="text-align: center">
+                    <p class="link">
+                      <span class="fab fa-github"></span>
+                      <a href="https://github.com/{{project.github}}">github.com/{{project.github}}</a>
+                    </p>
+                  </span>
+                  {% endif %}
+                  {% if project.npm %}
+                  <span style="text-align: center">
+                    <p class="link">
+                      <span class="fab fa-npm"></span>
+                      <a href="https://npmjs.com/package/{{project.npm}}">npmjs.com/package/{{project.npm}}</a>
+                    </p>
+                  </span>
+                  {% endif %}
+                  </span>
+                </div>
+              </section>
+              {% endfor %}
+            </div>
+
+            <hr class="separator"/>
+          </section>  
+
+          <section class="section copyright-section">
+            <div class="copyright">© Guillaume Villerez - All rights reserved.</div>
+          </section>
+
+        </section>
+
+        <section id="sticky-menu" class="menu">
+          <div class="menu-items">
+            <a id="work-menu" href="#work-anchor"><h2 class="menu-link">{{menu.work}}</h2></a>
+            <a id="skills-menu" href="#skills-anchor"><h2 class="menu-link">{{menu.skills}}</h2></a>
+            <a id="education-menu" href="#education-anchor"><h2 class="menu-link">{{menu.education}}</h2></a>
+            <a id="projects-menu" href="#projects-anchor"><h2 class="menu-link">{{menu.projects}}</h2></a>
+          </div>
+        </section>
+      {% endif %}
+    </body>
+
+    {% unless error %}
+    <script>
+
+      function toggle(button, id) {
+        var element = document.getElementById(id)
+
+        if (button) {
+          if (button.innerHTML.startsWith('Less'))
+            button.innerHTML = 'More information <i class="fas fa-chevron-down"></i>'
+          else
+            button.innerHTML = 'Less information <i class="fas fa-chevron-up"></i>'
+        }
+
+        if (element) {
+          element.classList.toggle('visible')
+        }
+      }
+
+      window.onscroll = () => updateSticky()
+
+      var headerMenu = document.getElementById("header-menu")
+      var stickyMenu = document.getElementById("sticky-menu")
+
+      var sticky = headerMenu.offsetTop;
+
+      function updateSticky() {
+        if (window.pageYOffset > sticky) {
+          stickyMenu.classList.add('slide-in')
+          stickyMenu.classList.remove('slide-out')
+        } else if (stickyMenu.classList.contains('slide-in')) {
+          stickyMenu.classList.add('slide-out')
+          stickyMenu.classList.remove('slide-in')
+        }
+      }
+
+      function selectMenu(menu) {
+        for (let i = 0; i < menus.length; i++) {
+          if (i == menu)
+            menus[i].classList.add('menu-link-selected')
+          else
+            menus[i].classList.remove('menu-link-selected')
+        }
+      }
+      
+      var work = document.getElementById("work")
+      var skills = document.getElementById("skills")
+      var education = document.getElementById("education")
+      var projects = document.getElementById("projects")
+
+      var workMenu = document.getElementById("work-menu").childNodes[0]
+      var skillsMenu = document.getElementById("skills-menu").childNodes[0]
+      var educationMenu = document.getElementById("education-menu").childNodes[0]
+      var projectsMenu = document.getElementById("projects-menu").childNodes[0]
+
+      var list = [work, skills, education, projects]
+      var menus = [workMenu, skillsMenu, educationMenu, projectsMenu]
+
+      document.addEventListener('scroll', function () {
+        for (let i = 0; i < list.length; i++) {
+          if (window.pageYOffset + 500 < list[i].offsetTop) {
+            selectMenu(i - 1)
+            return;
+          }
+          selectMenu(i)
+        }
+      })
+
+    </script>
+    {% endunless %}
+</html>
