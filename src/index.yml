@@ -1,15 +1,19 @@
 title: >-
   Hello! My name is <span class="colored">Guillaume</span> and I'm a
   <span class="colored">Software Engineer</span> at <span class="colored">
-  Memo Bank</span><img class="logo-title" src="public/img/memo-logo.png">
+  Louve Invest</span> 🐺
 intro1: >-
-  I'm currently working at <span class="colored">Memo Bank</span>,
-  helping them build a brand new European bank for SMEs. These days I'm working
-  on our banking core, which is responsible for handling everything
-  between our ledger and our customers.<br/><br/>Before joining them, I was at
-  <span class="colored">Ditto Services</span> building a white
-  label open banking solution, at <span class="colored">ReachFive</span>
-  helping to build & scale their CIAM solution and before that at <span
+  I'm currently working at <span class="colored">Louve Invest</span>,
+  helping them build a modern way to invest into real estate, making
+  it accessible to anyone. Since I joined them, I worked on streamlining 
+  our developement process through continuous integration and better tooling.
+  We've also been hard at work on a lot of features that need to ship quickly,
+  as any startup needs to.
+  
+  <br/><br/>Before joining them, I was at
+  <span class="colored">Memo Bank</span>, helping them build a brand new European bank for SMEs, and even before
+  at <span class="colored">ReachFive</span>
+  helping to build & scale their CIAM solution. I started my career at <span
   class="colored">Zengularity</span> where I had the opportunity to learn
   plenty and meet a lot of talented people.
 intro2: >-
@@ -209,8 +213,44 @@ skills:
 work:
   title: Where did I <span class="colored">work</span>? <img class="illustration" src="public/img/mug.png" />
   list:
+    - id: louve
+      date: 2022 - Now
+      title: Louve Invest
+      afterTitle: Software Engineer
+      tags:
+        - TypeScript
+        - React
+        - Monorepo
+        - Firebase
+        - FP
+      quote: >-
+        <span class="colored">Louve Invest</span> goal is to make real estate
+        investment accessible and easy in France. Our first big way to achieve
+        that was to computerize subscription to SCPI (Société civile de placement immobilier,
+        a french type of legal structure allowing anyone to invest indirectly into real estate through
+        shares). But that's only our first step!<br/><br/>
+
+        A year after its creation Louve has already made a name for itself
+        among investor and thrives to become the new reference for real estate investments.
+      description:
+        - >-
+          Streamlining of our developement process through continuous integration
+          using github actions both for PR validations and deployment.
+          New UI kit, made to be both extensible and powerful, along with a full redesign
+          of our webapp.
+          Validation and strong typing to the exisiting and new date, to enforce a better
+          control over our data.
+          New fully automated checkout process to buy SCPIs... and a lot of new features to come!
+        - >-
+          React is used for our frontend, with a backend built on top of the Express web server
+          provided by Firebase Functions.
+        - >-
+          Project developed in Typescript (back, front and mobile)
+          with Firebase (realtime and firestore) as our main database. We also use Firebase
+          Functions to build our backend.
+      link: https://www.louveinvest.com/
     - id: memo
-      date: 2020 - Now
+      date: 2020 - 2022
       title: Memo Bank
       afterTitle: Software Engineer
       tags:
@@ -248,36 +288,6 @@ work:
           with PostgreSQL as our main database, ActiveMQ as our messaging queue
           and Kafka as our message broker.
       link: https://memo.bank/
-    - id: ditto
-      date: "2020"
-      title: Ditto Services
-      afterTitle: Software Engineer
-      tags:
-        - FP
-        - Scala
-        - Kafka
-        - Event streaming
-        - Nano-services
-      quote: >-
-        The <span class="colored">Ditto
-        Services</span> Open Banking platform aims to allow companies to focus
-        on their core business by giving them access to a full range of
-        easily integrated banking APIs, and thus develop the most innovative
-        customer journeys.<br/><br/>
-
-        Thanks to the partnership with the sister company Travelex Bank, a credit
-        institution approved by the l’Autorité de Contrôle Prudentiel et de Résolution,
-        they are developing the latest generation technological platform for the
-        digital bank of tomorrow.
-      description:
-        - >-
-          Creation of the <span class="colored">Ditto Services</span> new generation
-          platform from scratch, using a nano-services based architecture, communicating
-          exclusively with event-streaming, ensuring maximum decoupling between the
-          different functional bricks.
-        - >-
-          Project developed in Scala (Akka-http, Akka-actor, Cats, Fs2, Doobie, Cats-Effect)
-          with PostgreSQL as our main database on each nano-service, and Kafka as our message broker.
     - id: reachfive
       date: 2018 - 2020
       title: ReachFive

@@ -20,7 +20,7 @@
           <!-- Into -->
 
           <section class="section">
-            <h1 class="section-title name">Hello! My name is <span class="colored">Guillaume</span> and I'm a <span class="colored">Software Engineer</span> at <span class="colored"> Memo Bank</span><img class="logo-title" src="public/img/memo-logo.png"></h1>
+            <h1 class="section-title name">Hello! My name is <span class="colored">Guillaume</span> and I'm a <span class="colored">Software Engineer</span> at <span class="colored"> Louve Invest</span> 🐺</h1>
 
             <section id="header-menu" class="menu">
               <div class="menu-items">
@@ -31,7 +31,8 @@
               </div>
             </section>
             <section class="presentation">
-              <p>I'm currently working at <span class="colored">Memo Bank</span>, helping them build a brand new European bank for SMEs. These days I'm working on our banking core, which is responsible for handling everything between our ledger and our customers.<br/><br/>Before joining them, I was at <span class="colored">Ditto Services</span> building a white label open banking solution, at <span class="colored">ReachFive</span> helping to build & scale their CIAM solution and before that at <span class="colored">Zengularity</span> where I had the opportunity to learn plenty and meet a lot of talented people.</p>
+              <p>I'm currently working at <span class="colored">Louve Invest</span>, helping them build a modern way to invest into real estate, making it accessible to anyone. Since I joined them, I worked on streamlining  our developement process through continuous integration and better tooling. We've also been hard at work on a lot of features that need to ship quickly, as any startup needs to.
+<br/><br/>Before joining them, I was at <span class="colored">Memo Bank</span>, helping them build a brand new European bank for SMEs, and even before at <span class="colored">ReachFive</span> helping to build & scale their CIAM solution. I started my career at <span class="colored">Zengularity</span> where I had the opportunity to learn plenty and meet a lot of talented people.</p>
               <span class="photo"></span>
             </section>
 
@@ -59,7 +60,50 @@
               <div class="timeline-up"></div>
               <ul class="timeline">
                 
-                <li class="event" data-date="2020 - Now">
+                <li class="event" data-date="2022 - Now">
+                  <div class="timeline-logo logo" style="background-image: url(public/img/louve-logo.png);"></div>
+                  <div class="event-content">
+                  <div class="line job-line2">
+                    <span class="title">Louve Invest</span>
+                    <span class="after-title">Software Engineer</span>
+                  </div>
+                  <div class="line">
+                    
+                      <span class="tag">TypeScript</span>
+                    
+                      <span class="tag">React</span>
+                    
+                      <span class="tag">Monorepo</span>
+                    
+                      <span class="tag">Firebase</span>
+                    
+                      <span class="tag">FP</span>
+                    
+                  </div>
+                  <div class="more-button" onclick="toggle(this, 'work_louve')" >More information <i class="fas fa-chevron-down"></i></div>
+                  <div class="additional-content" id="work_louve" >
+                    <div class="banner" style="background-image: url(public/img/louve-banner.png);"></div>
+                    
+                    <p class="quote"><span class="colored">Louve Invest</span> goal is to make real estate investment accessible and easy in France. Our first big way to achieve that was to computerize subscription to SCPI (Société civile de placement immobilier, a french type of legal structure allowing anyone to invest indirectly into real estate through shares). But that's only our first step!<br/><br/>
+A year after its creation Louve has already made a name for itself among investor and thrives to become the new reference for real estate investments.</p>
+                    
+                    
+                    <p class="description">Streamlining of our developement process through continuous integration using github actions both for PR validations and deployment. New UI kit, made to be both extensible and powerful, along with a full redesign of our webapp. Validation and strong typing to the exisiting and new date, to enforce a better control over our data. New fully automated checkout process to buy SCPIs... and a lot of new features to come!</p>
+                    
+                    <p class="description">React is used for our frontend, with a backend built on top of the Express web server provided by Firebase Functions.</p>
+                    
+                    <p class="description">Project developed in Typescript (back, front and mobile) with Firebase (realtime and firestore) as our main database. We also use Firebase Functions to build our backend.</p>
+                    
+                    
+                    <p class="link">
+                    <span class="fas fa-external-link-alt"></span>
+                    <a href="https://www.louveinvest.com/">Company page</a>
+                    </p>
+                    
+                  </div>
+                </li>
+                
+                <li class="event" data-date="2020 - 2022">
                   <div class="timeline-logo logo" style="background-image: url(public/img/memo-logo.png);"></div>
                   <div class="event-content">
                   <div class="line job-line2">
@@ -100,42 +144,6 @@ Three years after its creation, <span class="colored">Memo Bank</span> has obtai
                     <span class="fas fa-external-link-alt"></span>
                     <a href="https://memo.bank/">Company page</a>
                     </p>
-                    
-                  </div>
-                </li>
-                
-                <li class="event" data-date="2020">
-                  <div class="timeline-logo logo" style="background-image: url(public/img/ditto-logo.png);"></div>
-                  <div class="event-content">
-                  <div class="line job-line2">
-                    <span class="title">Ditto Services</span>
-                    <span class="after-title">Software Engineer</span>
-                  </div>
-                  <div class="line">
-                    
-                      <span class="tag">FP</span>
-                    
-                      <span class="tag">Scala</span>
-                    
-                      <span class="tag">Kafka</span>
-                    
-                      <span class="tag">Event streaming</span>
-                    
-                      <span class="tag">Nano-services</span>
-                    
-                  </div>
-                  <div class="more-button" onclick="toggle(this, 'work_ditto')" >More information <i class="fas fa-chevron-down"></i></div>
-                  <div class="additional-content" id="work_ditto" >
-                    <div class="banner" style="background-image: url(public/img/ditto-banner.png);"></div>
-                    
-                    <p class="quote">The <span class="colored">Ditto Services</span> Open Banking platform aims to allow companies to focus on their core business by giving them access to a full range of easily integrated banking APIs, and thus develop the most innovative customer journeys.<br/><br/>
-Thanks to the partnership with the sister company Travelex Bank, a credit institution approved by the l’Autorité de Contrôle Prudentiel et de Résolution, they are developing the latest generation technological platform for the digital bank of tomorrow.</p>
-                    
-                    
-                    <p class="description">Creation of the <span class="colored">Ditto Services</span> new generation platform from scratch, using a nano-services based architecture, communicating exclusively with event-streaming, ensuring maximum decoupling between the different functional bricks.</p>
-                    
-                    <p class="description">Project developed in Scala (Akka-http, Akka-actor, Cats, Fs2, Doobie, Cats-Effect) with PostgreSQL as our main database on each nano-service, and Kafka as our message broker.</p>
-                    
                     
                   </div>
                 </li>
@@ -385,9 +393,7 @@ Thanks to the partnership with the sister company Travelex Bank, a credit instit
                   
                   <p class="description">I was finally able to implement for the first time what I had learned at <span class="colored">ReachFive</span>, where the existing monolithic software was modularized into services. I thus had the opportunity  to reduce interdependencies to a minimum and end with almost independent  specialized modules. Some services would then be added following the same  model (for example an asynchronous worker, unstacking tasks ready to be performed). This was done along with a more classical refactoring of the codebase to reduce  and contain the technical debt.</p>
                   
-                  <p class="description"><span class="colored">Ditto Service</span> and <span class="colored">Memo</span> also share this same service decoupling approach, but have different way of overcoming that
-                    challenge. Where <span class="colored">Ditto</span> has made the choice of using function-sized nano-services, <span class="colored">Memo</span> made the choice of
-                    a breakdown by domain; both using a message broker to propagate actions in their respective systems.</p>
+                  <p class="description"><span class="colored">Ditto Service</span> and <span class="colored">Memo</span> also share this same service decoupling approach, but have different way of overcoming that challenge. Where <span class="colored">Ditto</span> has made the choice of using function-sized nano-services, <span class="colored">Memo</span> made the choice of a breakdown by domain; both using a message broker to propagate actions in their respective systems.</p>
                   
                 </div>
               </section>
@@ -421,23 +427,14 @@ Thanks to the partnership with the sister company Travelex Bank, a credit instit
                 <div class="additional-content" id="skill_functional" >
                   <div class="banner" style="background-image: url(public/img/functional-banner.png);"></div>
                   
-                  <p class="quote">
-                    Scala is a general-purpose programming language providing support for both object-oriented programming and functional programming. The language has 
-                    a strong static type system. Designed to be concise, many of Scala's design decisions are aimed to address criticisms of Java.
-                </p>
+                  <p class="quote">Scala is a general-purpose programming language providing support for both object-oriented programming and functional programming. The language has a strong static type system. Designed to be concise, many of Scala's design decisions are aimed to address criticisms of Java.</p>
                   
                   
-                  <p class="description">Functional programming brings additional security to compilation, allowing to rely solely on static validation where <span class="colored">Java</span>,
-                     for example, often has to rely on testing in addition to compilation to validate a piece of code. This paradigm allows to think differently 
-                     about writing code, and result in a clear and declarative code, representative of your intentions.</p>
+                  <p class="description">Functional programming brings additional security to compilation, allowing to rely solely on static validation where <span class="colored">Java</span>, for example, often has to rely on testing in addition to compilation to validate a piece of code. This paradigm allows to think differently  about writing code, and result in a clear and declarative code, representative of your intentions.</p>
                   
-                  <p class="description">After discovering <span class="colored">Scala</span> (and more broadly functional programming) in school, I had the opportunity to build up 
-                     my knowledge during my time at <span class="colored">Zengularity</span>, where I learned how to get the best out of it from the same people actively 
-                     participating in the life of the language ecosystem.</p>
+                  <p class="description">After discovering <span class="colored">Scala</span> (and more broadly functional programming) in school, I had the opportunity to build up my knowledge during my time at <span class="colored">Zengularity</span>, where I learned how to get the best out of it from the same people actively  participating in the life of the language ecosystem.</p>
                   
-                  <p class="description">I then had the perfect occasion to use my newly acquired knowledge at <span class="colored">ReachFive</span> and then later at <span class="colored">Ditto Services</span>
-                     to build applications that are both complex (due to their respective functional scope) and robust, by relying on the <span class="colored">Scala</span> 
-                     language, its paradigm, and as well on the entire ecosystem that revolves around.</p>
+                  <p class="description">I then had the perfect occasion to use my newly acquired knowledge at <span class="colored">ReachFive</span> and then later at <span class="colored">Ditto Services</span> to build applications that are both complex (due to their respective functional scope) and robust, by relying on the <span class="colored">Scala</span> language, its paradigm, and as well on the entire ecosystem that revolves around.</p>
                   
                 </div>
               </section>
@@ -469,21 +466,14 @@ Thanks to the partnership with the sister company Travelex Bank, a credit instit
                 <div class="additional-content" id="skill_javascript" >
                   <div class="banner" style="background-image: url(public/img/javascript-banner.png);"></div>
                   
-                  <p class="quote">
-                    TypeScript is an open-source language which builds on JavaScript, one of the world’s most used tools, by adding static type definitions.
-                </p>
+                  <p class="quote">TypeScript is an open-source language which builds on JavaScript, one of the world’s most used tools, by adding static type definitions.</p>
                   
                   
-                  <p class="description">In addition to providing typing, <span class="colored">TypeScript</span> also allows for a more descriptive approach to be explored in the
-                      way of building applications (for example along with <span class="colored">React</span> which also use a declarative way of defining components).</p>
+                  <p class="description">In addition to providing typing, <span class="colored">TypeScript</span> also allows for a more descriptive approach to be explored in the way of building applications (for example along with <span class="colored">React</span> which also use a declarative way of defining components).</p>
                   
-                  <p class="description">I used it extensively in frontend development (along with <span class="colored">JavaScript</span>) to build many web applications, of 
-                      varying sizes and scopes. <span class="colored">TypeScript</span> gave us the consistency necessary to work in team on a large codebase
-                      with a complex functional domain.</p>
+                  <p class="description">I used it extensively in frontend development (along with <span class="colored">JavaScript</span>) to build many web applications, of varying sizes and scopes. <span class="colored">TypeScript</span> gave us the consistency necessary to work in team on a large codebase with a complex functional domain.</p>
                   
-                  <p class="description">Finally, I also had the opportunity to use it on the server side with <span class="colored">NodeJS</span> on many personal projects.
-                      Easy to set up and quick to develop, typing ensures code clarity and longevity. Finally, the <span class="colored">JavaScript</span> 
-                      ecosystem ensures that many libraries are mature enough (and for the most part already typed) to be production ready.</p>
+                  <p class="description">Finally, I also had the opportunity to use it on the server side with <span class="colored">NodeJS</span> on many personal projects. Easy to set up and quick to develop, typing ensures code clarity and longevity. Finally, the <span class="colored">JavaScript</span> ecosystem ensures that many libraries are mature enough (and for the most part already typed) to be production ready.</p>
                   
                 </div>
               </section>
@@ -517,23 +507,14 @@ Thanks to the partnership with the sister company Travelex Bank, a credit instit
                 <div class="additional-content" id="skill_kotlin" >
                   <div class="banner" style="background-image: url(public/img/kotlin-banner.png);"></div>
                   
-                  <p class="quote">
-                    Kotlin is a cross-platform, statically typed, general-purpose programming language with type inference. Kotlin is designed to interoperate fully 
-                    with Java, with a more concise syntax thanks to type inference.
-                </p>
+                  <p class="quote">Kotlin is a cross-platform, statically typed, general-purpose programming language with type inference. Kotlin is designed to interoperate fully with Java, with a more concise syntax thanks to type inference.</p>
                   
                   
-                  <p class="description">Like <span class="colored">Scala</span>, <span class="colored">Kotlin</span> is also positioned as a « better <span class="colored">Java</span> », borrowing
-                     notions of functional language while remaining strongly object oriented by nature. Unlike <span class="colored">Scala</span>, it is positioned closer to 
-                     <span class="colored">Java</span> in its philosophy, and is not intended to be a functional language (even with the borrowed syntax). Interoparability with
-                     <span class="colored">Java</span> also helps to make the transition between the two languages as transparent and quick as possible.</p>
+                  <p class="description">Like <span class="colored">Scala</span>, <span class="colored">Kotlin</span> is also positioned as a « better <span class="colored">Java</span> », borrowing notions of functional language while remaining strongly object oriented by nature. Unlike <span class="colored">Scala</span>, it is positioned closer to <span class="colored">Java</span> in its philosophy, and is not intended to be a functional language (even with the borrowed syntax). Interoparability with <span class="colored">Java</span> also helps to make the transition between the two languages as transparent and quick as possible.</p>
                   
-                  <p class="description">After having spent almost 2 years of <span class="colored">Java</span> during my work-study program and having quickly abandoned this language in favor of <span class="colored">Scala</span>,
-                     I had the opportunity to discover and learn <span class="colored">Kotlin</span> at <span class="colored">Memo Bank</span>. Easy to approach after having used
-                     <span class="colored">Scala</span>, the language corrects many <span class="colored">Java</span> limitations and flaws due to its more modern approach and stronger typing.</p>
+                  <p class="description">After having spent almost 2 years of <span class="colored">Java</span> during my work-study program and having quickly abandoned this language in favor of <span class="colored">Scala</span>, I had the opportunity to discover and learn <span class="colored">Kotlin</span> at <span class="colored">Memo Bank</span>. Easy to approach after having used <span class="colored">Scala</span>, the language corrects many <span class="colored">Java</span> limitations and flaws due to its more modern approach and stronger typing.</p>
                   
-                  <p class="description"><span class="colored">Kotlin</span> allows us at <span class="colored">Memo</span> to represent a complex business domain (as banks often are) in a clear and robust way, maintaining a high-quality code.
-                     The interoperability with <span class="colored">Java</span> libraries allow us to take advantage of a rich and mature ecosystem, ensuring the best of both worlds.</p>
+                  <p class="description"><span class="colored">Kotlin</span> allows us at <span class="colored">Memo</span> to represent a complex business domain (as banks often are) in a clear and robust way, maintaining a high-quality code. The interoperability with <span class="colored">Java</span> libraries allow us to take advantage of a rich and mature ecosystem, ensuring the best of both worlds.</p>
                   
                 </div>
               </section>
@@ -564,19 +545,11 @@ Thanks to the partnership with the sister company Travelex Bank, a credit instit
                   <div class="banner" style="background-image: url(public/img/database-banner.png);"></div>
                   
                   
-                  <p class="description">I've used SQL database in almost all my projects, from <span class="colored">MySQL</span> when I was still learning the ropes, to <span class="colored">Oracle DB</span>
-                     for larger companies when I was at <span class="colored">Zengularity</span> to PostgreSQL at <span class="colored">Memo</span> ; in application ranging from a 
-                     REST service to a core banking system.</p>
+                  <p class="description">I've used SQL database in almost all my projects, from <span class="colored">MySQL</span> when I was still learning the ropes, to <span class="colored">Oracle DB</span> for larger companies when I was at <span class="colored">Zengularity</span> to PostgreSQL at <span class="colored">Memo</span> ; in application ranging from a REST service to a core banking system.</p>
                   
-                  <p class="description">I had the chance of using <span class="colored">MongoDB</span> for the first time at <span class="colored">Zengularity</span> in a particularly challenging application,
-                     using event sourcing to trace all modifications. <span class="colored">Mongo</span> brought us a lot of usefull features (like being document oriented, allowing 
-                     us to direclty use JSON, along with the scaling promises), altough with a few drawbacks (mainly not being able to have relationships nor ebing able to efficiently lock a document like
-                     SQL bases usually allow it)</p>
+                  <p class="description">I had the chance of using <span class="colored">MongoDB</span> for the first time at <span class="colored">Zengularity</span> in a particularly challenging application, using event sourcing to trace all modifications. <span class="colored">Mongo</span> brought us a lot of usefull features (like being document oriented, allowing us to direclty use JSON, along with the scaling promises), altough with a few drawbacks (mainly not being able to have relationships nor ebing able to efficiently lock a document like SQL bases usually allow it)</p>
                   
-                  <p class="description">I had a more mixed experience with <span class="colored">ElasticSearch</span>, as I sadly saw it used as a main database, bringing issues on the data consistency (as
-                     <span class="colored">ES</span> is by default eventually consistent) and on its performance (since they had to force the refresh after each operation). Fortunately, we use 
-                     it as intended at <span class="colored">Memo</span> to index and build
-                     a search engine for our frontend application, where it can finally show all its power.</p>
+                  <p class="description">I had a more mixed experience with <span class="colored">ElasticSearch</span>, as I sadly saw it used as a main database, bringing issues on the data consistency (as <span class="colored">ES</span> is by default eventually consistent) and on its performance (since they had to force the refresh after each operation). Fortunately, we use it as intended at <span class="colored">Memo</span> to index and build a search engine for our frontend application, where it can finally show all its power.</p>
                   
                 </div>
               </section>
@@ -609,16 +582,11 @@ Thanks to the partnership with the sister company Travelex Bank, a credit instit
                   <div class="banner" style="background-image: url(public/img/ops-banner.png);"></div>
                   
                   
-                  <p class="description">At my current job and on my personal projects I mainly use <span class="colored">Docker</span> to define isolated and easily deployable work environments, allowing to replicate an 
-                     architecture and associated services locally. I also had the opportunity to define containers used in production in a <span class="colored">Kubernetes</span> 
-                     during my time at <span class="colored">Ditto Service</span>.</p>
+                  <p class="description">At my current job and on my personal projects I mainly use <span class="colored">Docker</span> to define isolated and easily deployable work environments, allowing to replicate an architecture and associated services locally. I also had the opportunity to define containers used in production in a <span class="colored">Kubernetes</span> during my time at <span class="colored">Ditto Service</span>.</p>
                   
-                  <p class="description">I also had the opportunity to work on the <span class="colored">Jenkins</span> configuration on some projects, whether simply
-                     on continuous integration or on continuous deployment. I also used <span class="colored">Circle-ci</span> and <span class="colored">Travis</span>
-                     for similar purposes.</p>
+                  <p class="description">I also had the opportunity to work on the <span class="colored">Jenkins</span> configuration on some projects, whether simply on continuous integration or on continuous deployment. I also used <span class="colored">Circle-ci</span> and <span class="colored">Travis</span> for similar purposes.</p>
                   
-                  <p class="description">Finally, I take care of my <span class="colored">Linux</span> server myself, more by hobby than by necessity, using <span class="colored">Docker</span> 
-                     to isolate my different services. This server host, among other things, the page you're currently reading.</p>
+                  <p class="description">Finally, I take care of my <span class="colored">Linux</span> server myself, more by hobby than by necessity, using <span class="colored">Docker</span>  to isolate my different services. This server host, among other things, the page you're currently reading.</p>
                   
                 </div>
               </section>
